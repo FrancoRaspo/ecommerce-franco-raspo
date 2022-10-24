@@ -1,0 +1,18 @@
+version: "3"
+
+services:
+  mysql-repository:
+    image: mysql:8.0
+    container_name: mysql-repository
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+    ports:
+      - "3307:3306"
+
+  coder-web-app:
+    build: src
+    container_name: coder-web-app
+    ports:
+      - "8081:8081"
+    depends_on:
+      - mysql-repository

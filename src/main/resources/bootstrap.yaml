@@ -1,0 +1,24 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: ecommerce-main
+#  h2.console.enabled: true
+#  datasource:
+#    url: jdbc:h2:mem:coder-dev
+#    driverClassName: org.h2.Driver
+#    username: username
+#    password: password
+#  jpa:
+#    database-platform: org.hibernate.dialect.H2Dialect
+#    defer-datasource-initialization: true
+  datasource:
+    url: jdbc:mysql://localhost:3308/ecommerce?createDatabaseIfNotExist=true
+    username: root
+    password: root
+  jpa:
+    database: mysql
+    hibernate:
+      ddl-auto: update
+  jpa-hibernate:
+    dialect: org.hibernate.dialect.MySQL8Dialect

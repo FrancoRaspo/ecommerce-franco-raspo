@@ -5,14 +5,18 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import javax.persistence.Column;
+
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class ProductoRequest {
+public class UsuarioRequest {
+    private String usuario;
     private String nombre;
-    private String familia;
-    private String marca;
+    private String telefono;
+    private String password;
+    private String email;
 
 }

@@ -9,19 +9,19 @@ import lombok.Setter;
 import javax.persistence.*;
 
 @Entity
-@Table(name="producto")
+@Table(name="producto_item")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
 
-public class Producto {
+public class CarritoItem {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
-    @Column(name="descripcion", nullable = false, length = 100)
-    private String descripcion;
-    private Double precioUnitario;
-    @Column(name="categoria", nullable = false, length = 100)
-    private String categoria;
+    @OneToOne
+    @JoinColumn(name = "producto_id", nullable = false)
+    private Producto producto;
+    @Column(nullable = false)
+    private Long cantidad;
 }

@@ -1,0 +1,7 @@
+spring:
+  application:
+    name: ecommerce-dev
+  cloud:
+    config:
+      uri: http://localhost:8080
+      name: ecommerce-dev
