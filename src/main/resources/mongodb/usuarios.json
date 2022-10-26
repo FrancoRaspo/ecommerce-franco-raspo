@@ -1,0 +1,2 @@
+{ "_id" : { "$oid" : "6359191e689fcc3b80b5c9d5" }, "usuario" : "franco", "nombre" : "Franco Raspo", "telefono" : "341-5448644", "contraseña" : "$#%&#%$&", "email" : "francoraspo@gmail.com" }
+{ "_id" : { "$oid" : "6359195b689fcc3b80b5c9d8" }, "usuario" : "pedro", "nombre" : "Pedro Almodobar", "telefono" : "341-5433443", "contraseña" : "pas%&/&&/", "email" : "pedrito45@gmail.com" }
