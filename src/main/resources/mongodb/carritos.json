@@ -1,0 +1,2 @@
+{ "_id" : { "$oid" : "63595b07109fa72b8a69ef4a" }, "numero" : "1", "fecha_hora" : "2022-08-20 06:40:12", "direccion_entrega" : "French 2334", "items" : [ { "producto_id" : "4435455", "cantidad" : 20.0 }, { "producto_id" : "9000989", "cantidad" : 21.0 } ], "usuario" : "franco" }
+{ "_id" : { "$oid" : "63595b1f109fa72b8a69ef4b" }, "numero" : "2", "fecha_hora" : "2022-08-21 13:40:12", "direccion_entrega" : "Av Oroño 34", "items" : [ { "producto_id" : "9000989", "cantidad" : 3.0 }, { "producto_id" : "4435455", "cantidad" : 2.0 } ], "usuario" : "pedro" }

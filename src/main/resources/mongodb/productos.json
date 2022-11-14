@@ -1,0 +1,2 @@
+{ "_id" : { "$oid" : "63591af0689fcc3b80b5c9dc" }, "codigo" : "4435455", "descripcion" : "Iphone 13", "categoria" : "Celulares", "precio_unitario" : 300000, "clase" : "Rojo", "marca" : "Apple", "image_url" : "/imgs/iphone13.png" }
+{ "_id" : { "$oid" : "63591b5c689fcc3b80b5c9de" }, "codigo" : "9000989", "descripcion" : "Plancha", "categoria" : "Electrodomésticos", "precio_unitario" : 150000, "clase" : "Azul", "marca" : "Philips", "image_url" : "/imgs/plancha_philips_azul.png" }
