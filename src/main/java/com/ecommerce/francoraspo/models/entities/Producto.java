@@ -1,24 +1,23 @@
 package com.ecommerce.francoraspo.models.entities;
 
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
+import org.springframework.data.mongodb.core.mapping.Document;
 
 import javax.persistence.*;
 
-@Entity
-@Table(name="producto")
+@Document(collection = "productos")
 @Getter
 @Setter
 @AllArgsConstructor
 @NoArgsConstructor
+@ToString
 
 public class Producto {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private Long id;
+    private String   id;
+    @Column(name="codigo", nullable = false, length = 50)
+    private String codigo;
     @Column(name="descripcion", nullable = false, length = 100)
     private String descripcion;
     private Double precioUnitario;

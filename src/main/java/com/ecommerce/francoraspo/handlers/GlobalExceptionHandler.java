@@ -22,7 +22,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(IndexOutOfBoundsException.class)
     public ResponseEntity<Response> indexOutOfBoundsException(IndexOutOfBoundsException e) {
         final Response<String> result = new Response(Instant.now(),
-                "[PortafolioController] - IndexOutOfBoundsException- Not Found. " + e.getMessage(), 404, "Error");
+                "IndexOutOfBoundsException- Not Found. " + e.getMessage(), 404, "Error");
         return new ResponseEntity<>(result, HttpStatus.IM_USED);
     }
 
@@ -45,7 +45,6 @@ public class GlobalExceptionHandler {
         return new ResponseEntity<>(result, HttpStatus.INTERNAL_SERVER_ERROR);
     }
 
-    //TODO Con mapping
     @ResponseBody
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(MethodArgumentNotValidException.class)

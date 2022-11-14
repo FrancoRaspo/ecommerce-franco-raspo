@@ -14,12 +14,12 @@ import java.util.Optional;
 public class UsuarioServiceImp implements UsuarioService {
     private final UsuarioRepository usuarioRepository;
     @Override
-    public Optional<Usuario> getUsuarioById(Long id) {
+    public Optional<Usuario> obtenerUsuarioById(String id) {
         return usuarioRepository.findById(id);
     }
 
     @Override
-    public Optional<Usuario> deleteUsuarioById(Long id) {
+    public Optional<Usuario> eliminarUsuarioById(String id) {
         Optional<Usuario> usuarioDoc = usuarioRepository.findById(id);
         if (usuarioDoc.isPresent()) {
             usuarioRepository.delete(usuarioDoc.get());
@@ -30,13 +30,15 @@ public class UsuarioServiceImp implements UsuarioService {
     }
 
     @Override
-    public Usuario newUsuario(UsuarioRequest usuarioRequest) {
+    public Usuario nuevoUsuario(UsuarioRequest usuarioRequest) {
 
         final Usuario usuario = new Usuario();
 
         usuario.setUsuario(usuarioRequest.getUsuario());
         usuario.setEmail(usuarioRequest.getEmail());
         usuario.setPassword(usuarioRequest.getPassword());
+        usuario.setNombre(usuarioRequest.getNombre());
+        usuario.setTelefono(usuarioRequest.getTelefono());
 
         usuarioRepository.save(usuario);
 
@@ -44,7 +46,7 @@ public class UsuarioServiceImp implements UsuarioService {
     }
 
     @Override
-    public Optional<Usuario> updateUsuario(Long id, UsuarioRequest usuarioRequest) {
+    public Optional<Usuario> actalizarUsuario(String id, UsuarioRequest usuarioRequest) {
 
         final Optional<Usuario> usuarioDoc = usuarioRepository.findById(id);
 
@@ -54,6 +56,8 @@ public class UsuarioServiceImp implements UsuarioService {
             usuario.setUsuario(usuarioRequest.getUsuario());
             usuario.setEmail(usuarioRequest.getEmail());
             usuario.setPassword(usuarioRequest.getPassword());
+            usuario.setNombre(usuarioRequest.getNombre());
+            usuario.setTelefono(usuarioRequest.getTelefono());
 
             usuarioRepository.save(usuario);
             return Optional.of(usuario);

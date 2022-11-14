@@ -4,8 +4,8 @@ import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
+import org.springframework.format.annotation.NumberFormat;
 
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
 import javax.validation.constraints.NotNull;
 import javax.validation.constraints.Size;
@@ -15,14 +15,13 @@ import javax.validation.constraints.Size;
 @NoArgsConstructor
 @AllArgsConstructor
 
-public class UsuarioRequest {
-    @NotNull @NotBlank  @Size(min=4, max=20)
-    private String usuario;
+public class ProductoRequest {
+    @NotNull @NotBlank   @Size(min=4, max=50)
+    private String codigo;
     @NotNull @NotBlank
-    private String nombre;
-    private String telefono;
-    @NotNull @NotBlank
-    private String password;
-    @Email @NotNull @NotBlank
-    private String email;
+    private String descripcion;
+    @NotNull @NumberFormat
+    private Double precioUnitario;
+    @NotNull @NotBlank @Size(min=4, max=100)
+    private String categoria;
 }

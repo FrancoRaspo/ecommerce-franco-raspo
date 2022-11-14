@@ -1,15 +1,16 @@
 package com.ecommerce.francoraspo.controllers;
 
-import com.ecommerce.francoraspo.models.entities.Producto;
 import com.ecommerce.francoraspo.models.entities.Usuario;
 import com.ecommerce.francoraspo.models.requests.UsuarioRequest;
 import com.ecommerce.francoraspo.services.UsuarioService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import javax.validation.Valid;
 import java.net.URI;
 import java.util.Optional;
 
@@ -21,10 +22,10 @@ public class UsuarioController {
     @Autowired
     private final UsuarioService usuarioService;
 
-
+    @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "usuario/{id}", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<?> getUsuarioById(@PathVariable(name="id") final Long id) {
-        final Optional<Usuario> usuario = usuarioService.getUsuarioById(id);
+    public ResponseEntity<?> getUsuarioById(@PathVariable(name="id") final String id) {
+        final Optional<Usuario> usuario = usuarioService.obtenerUsuarioById(id);
 
         if (usuario.isPresent()) {
             return ResponseEntity.ok(usuario);
@@ -34,8 +35,8 @@ public class UsuarioController {
     }
 
     @DeleteMapping(value = "usuario/{id}", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<?> deleteUsuarioById(@PathVariable(name="id") final Long id) {
-        final Optional<Usuario> usuario = usuarioService.deleteUsuarioById(id);
+    public ResponseEntity<?> deleteUsuarioById(@PathVariable(name="id") final String id) {
+        final Optional<Usuario> usuario = usuarioService.eliminarUsuarioById(id);
 
         if (usuario.isPresent()) {
             return ResponseEntity.ok(usuario);
@@ -45,10 +46,10 @@ public class UsuarioController {
     }
 
     @PostMapping(value = "usuario", consumes = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<?> newUsuario(@RequestBody UsuarioRequest usuarioRequest){
+    public ResponseEntity<?> newUsuario(@Valid @RequestBody UsuarioRequest usuarioRequest){
 
         try {
-            final Usuario usuario = usuarioService.newUsuario(usuarioRequest);
+            final Usuario usuario = usuarioService.nuevoUsuario(usuarioRequest);
             return ResponseEntity.created(URI.create("")).body(usuario);
         } catch (Exception e) {
             e.printStackTrace();
@@ -59,14 +60,14 @@ public class UsuarioController {
 
     @PutMapping(value = "usuario/{id}", produces = {MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<?> updateUsuario(@PathVariable(name = "id") final Long id,
+    public ResponseEntity<?> updateUsuario(@PathVariable(name = "id") final String id,
                                                @RequestBody final UsuarioRequest usuarioRequest) {
 
-        final Optional<Usuario> usuario = usuarioService.getUsuarioById(id);
+        final Optional<Usuario> usuario = usuarioService.obtenerUsuarioById(id);
 
         if (usuario.isPresent()) {
             try {
-                final Optional<Usuario> usuarioGuardado = usuarioService.updateUsuario(id, usuarioRequest);
+                final Optional<Usuario> usuarioGuardado = usuarioService.actalizarUsuario(id, usuarioRequest);
                 if (usuarioGuardado.isPresent()) {
                     return ResponseEntity.ok(usuarioGuardado.get());
                 }
