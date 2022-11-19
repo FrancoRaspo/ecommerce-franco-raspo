@@ -10,8 +10,8 @@ import java.time.Instant;
 @AllArgsConstructor
 @NoArgsConstructor
 public class Response<T> {
-    private Instant timestamp;
-    private T data;
-    private int respondeCode;
-    private String status;
+    private Instant fechaHora;
+    private T detalle;
+    private int codigoRepuesta;
+    private String estatus;
 }

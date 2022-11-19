@@ -12,6 +12,5 @@ import lombok.Setter;
 @AllArgsConstructor(staticName = "of")
 @JsonInclude(JsonInclude.Include.NON_NULL)
 public class ErrorMessage {
-//    private String code;
     private String error;
 }

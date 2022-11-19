@@ -1,13 +1,9 @@
 package com.ecommerce.francoraspo.services;
 
-import com.ecommerce.francoraspo.models.entities.Usuario;
-import com.ecommerce.francoraspo.models.requests.UsuarioRequest;
-
-import java.util.Optional;
+import org.springframework.security.core.userdetails.UserDetails;
+import org.springframework.security.core.userdetails.UsernameNotFoundException;
 
 public interface UsuarioService {
-        Optional<Usuario> obtenerUsuarioById(final String id);
-        Optional<Usuario> eliminarUsuarioById(final String id);
-        Usuario nuevoUsuario(final UsuarioRequest usuarioRequest);
-        Optional<Usuario> actalizarUsuario(final String id, final UsuarioRequest usuarioRequest);
+    UserDetails loadUserByUsername(String username) throws UsernameNotFoundException;
 }
+

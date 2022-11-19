@@ -28,6 +28,8 @@ public class Carrito {
 
     private String direccionEntrega;
 
+    private String usuarioNombre;
+
     public ProductoItem actualizaItem(ProductoItem carritoItem) {
 
 

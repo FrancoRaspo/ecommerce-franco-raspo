@@ -1,9 +1,6 @@
 package com.ecommerce.francoraspo.models.requests;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import javax.validation.constraints.Max;
 import javax.validation.constraints.Min;
@@ -13,6 +10,8 @@ import javax.validation.constraints.NotNull;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
+
 
 public class ProductoItemRequest {
     @NotNull @Min(1) @Max(999)

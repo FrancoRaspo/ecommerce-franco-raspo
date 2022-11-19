@@ -6,6 +6,7 @@ import com.ecommerce.francoraspo.models.requests.ProductoRequest;
 import com.ecommerce.francoraspo.repositories.ProductoRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
+import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
 import java.util.Optional;
@@ -15,12 +16,14 @@ import java.util.Optional;
 
 public class ProductoServiceImp implements ProductoService {
     private final ProductoRepository productoRepository;
+
     @Override
     public Optional<Producto> obtenerProductoById(String id) {
         return productoRepository.findById(id);
     }
 
     @Override
+    @Transactional
     public Optional<Producto> eliminarProductoById(String id) {
         Optional<Producto> productoDoc = productoRepository.findById(id);
         if (productoDoc.isPresent()) {
@@ -32,6 +35,7 @@ public class ProductoServiceImp implements ProductoService {
     }
 
     @Override
+    @Transactional
     public Producto nuevoProducto(ProductoRequest productoRequest) {
 
         final Producto producto = new Producto();
@@ -47,6 +51,7 @@ public class ProductoServiceImp implements ProductoService {
     }
 
     @Override
+    @Transactional
     public Optional<Producto> actualizarProducto(String id, ProductoRequest productoRequest) {
 
         final Optional<Producto> productoDoc = productoRepository.findById(id);
@@ -62,7 +67,7 @@ public class ProductoServiceImp implements ProductoService {
             productoRepository.save(producto);
             return Optional.of(producto);
         } else {
-             return Optional.empty();
+            return Optional.empty();
         }
 
     }

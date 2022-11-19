@@ -1,6 +1,7 @@
 package com.ecommerce.francoraspo.handlers;
 
 import com.ecommerce.francoraspo.handlers.exceptions.ApiRestException;
+import com.ecommerce.francoraspo.handlers.exceptions.EntityNotFoundException;
 import com.ecommerce.francoraspo.models.responses.Response;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -18,14 +19,6 @@ import java.util.Map;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
-
-    @ExceptionHandler(IndexOutOfBoundsException.class)
-    public ResponseEntity<Response> indexOutOfBoundsException(IndexOutOfBoundsException e) {
-        final Response<String> result = new Response(Instant.now(),
-                "IndexOutOfBoundsException- Not Found. " + e.getMessage(), 404, "Error");
-        return new ResponseEntity<>(result, HttpStatus.IM_USED);
-    }
-
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<Response> runtimeException(RuntimeException e) {
         final Response<String> result = new Response(Instant.now(), "[RuntimeException Response] - Exception: Error desconocido " + e.getMessage(), 501, "Error");
@@ -35,15 +28,29 @@ public class GlobalExceptionHandler {
     @ResponseBody
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(ApiRestException.class)
-    public ResponseEntity<Response> messageErrorHandle(final ApiRestException e) {
+    public ResponseEntity<Response> messageErrorApiRestException(final ApiRestException e) {
         final Response<String> result = new Response(
                 Instant.now(),
-                "[ApiRestException Response] - ApiRestException: " + e.getMessage(),
-                404,
-                "No encontrado");
+                "ApiRestException: " + e.getMessage(),
+                HttpStatus.INTERNAL_SERVER_ERROR.value(),
+                "Error");
 
         return new ResponseEntity<>(result, HttpStatus.INTERNAL_SERVER_ERROR);
     }
+
+    @ResponseBody
+    @ResponseStatus(HttpStatus.BAD_REQUEST)
+    @ExceptionHandler(EntityNotFoundException.class)
+    public ResponseEntity<Response> messageErrorEntityNotFoundException(final EntityNotFoundException e) {
+        final Response<String> result = new Response(
+                Instant.now(),
+                "EntityNotFoundException: " + e.getMessage(),
+                HttpStatus.NOT_FOUND.value(),
+                "No encontrado");
+
+        return new ResponseEntity<>(result, HttpStatus.NOT_FOUND);
+    }
+
 
     @ResponseBody
     @ResponseStatus(HttpStatus.BAD_REQUEST)

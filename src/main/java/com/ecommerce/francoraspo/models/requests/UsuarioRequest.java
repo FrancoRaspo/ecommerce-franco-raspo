@@ -1,28 +1,25 @@
 package com.ecommerce.francoraspo.models.requests;
 
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
-import javax.validation.constraints.Email;
 import javax.validation.constraints.NotBlank;
-import javax.validation.constraints.NotNull;
-import javax.validation.constraints.Size;
+import java.util.Set;
 
 @Getter
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
-
+@ToString
 public class UsuarioRequest {
-    @NotNull @NotBlank  @Size(min=4, max=20)
-    private String usuario;
-    @NotNull @NotBlank
+    @NotBlank
     private String nombre;
+    @NotBlank
     private String telefono;
-    @NotNull @NotBlank
-    private String password;
-    @Email @NotNull @NotBlank
+    @NotBlank
+    private String nombreUsuario;
+    @NotBlank
+    private String clave;
+    @NotBlank
     private String email;
+    private Set<String> roles;
 }

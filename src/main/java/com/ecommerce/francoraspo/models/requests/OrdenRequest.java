@@ -1,10 +1,7 @@
 package com.ecommerce.francoraspo.models.requests;
 
 import com.ecommerce.francoraspo.models.entities.ProductoItem;
-import lombok.AllArgsConstructor;
-import lombok.Getter;
-import lombok.NoArgsConstructor;
-import lombok.Setter;
+import lombok.*;
 
 import java.util.List;
 
@@ -12,8 +9,8 @@ import java.util.List;
 @Setter
 @NoArgsConstructor
 @AllArgsConstructor
+@ToString
 
 public class OrdenRequest {
     private List<ProductoItem> productoItems;
-    private String usuario;
 }
