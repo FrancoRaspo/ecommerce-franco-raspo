@@ -9,10 +9,10 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.coderhouse</groupId>
-	<artifactId>41670-spring-boot-coder</artifactId>
+	<artifactId>ecommerce-franco-raspo</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>41670-spring-boot-coder</name>
-	<description>Demo project for Spring Boot</description>
+	<name>ecommerce-franco-raspo</name>
+	<description>Proyecto curso java CoderHouse</description>
 	<properties>
 		<java.version>11</java.version>
 		<spring-cloud.version>2021.0.4</spring-cloud.version>
