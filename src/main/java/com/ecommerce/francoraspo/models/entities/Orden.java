@@ -1,5 +1,6 @@
 package com.ecommerce.francoraspo.models.entities;
 
+import com.ecommerce.francoraspo.models.enums.EOrdenEstado;
 import lombok.*;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -33,10 +34,11 @@ public class Orden {
     @Column(nullable = false)
     private String usuario;
 
-
-    private String carritoId;
+    private Carrito carrito;
 
     Double monto;
+
+    private EOrdenEstado estado;
 
     public Double getMonto() {
 

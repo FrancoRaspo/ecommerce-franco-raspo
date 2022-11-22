@@ -20,16 +20,16 @@ public class Application implements ApplicationListener<ApplicationReadyEvent> {
 		SpringApplication.run(Application.class, args);
 	}
 
-
 	@Override
 	public void onApplicationEvent(ApplicationReadyEvent event) {
-		//Si no existen roles los inicializo
+		//Si no existen roles los inicializo con la enum ERolSeguridad
 		if (roleRepository.count() == 0 ) {
 			logger.info("Inicializando repositorios...");
 			logger.info("Cargando roles...");
 			roleRepository.save( new RolSeguridad(ERolSeguridad.ADMINISTRADOR));
 			roleRepository.save( new RolSeguridad(ERolSeguridad.INVITADO));
 			roleRepository.save( new RolSeguridad(ERolSeguridad.USUARIO));
+			logger.info("Todo listo :-)");
 		}
 	}
 }

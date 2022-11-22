@@ -14,8 +14,10 @@ public interface OrdenService {
     Optional<Orden> nuevaOrden(final OrdenRequest ordenRequest, final String usuarioNombre) throws Exception;
 
     Optional<Orden> nuevaOrdenByCarritoUsuarioNombre(
-            final OrdenRequest ordenRequest,
             final String usuarioNombre) throws Exception;
+
+
+    Optional<Orden> cerrarOrdenById(final String id) throws Exception;
 
     Optional<ProductoItem> nuevoProducto(final String id, final String productoId,
                                          final long cantidad) throws Exception;

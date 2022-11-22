@@ -2,11 +2,6 @@
 <Configuration>
     <Appenders>
         <Console name="Console" target="SYSTEM_OUT">
-
-<!--            <PatternLayout-->
-<!--                    pattern="[%d] %t {%level} %c == %msg %n" />-->
-            <!--            <PatternLayout-->
-            <!--                    pattern="[%d{yyyy.MM.dd HH:mm:ssss}] %t %-5level %-50c{1.} >> %msg %n"/>-->
             <PatternLayout
                     pattern="%style{%d{ISO8601}}{white} %highlight{%-5level}{FATAL=bg_red, ERROR=bg_red, WARN=yellow, INFO=green} [%style{%t}{bright,blue}] %style{%-50C{1.}}{bright,yellow}: %msg%n%throwable" />
         </Console>

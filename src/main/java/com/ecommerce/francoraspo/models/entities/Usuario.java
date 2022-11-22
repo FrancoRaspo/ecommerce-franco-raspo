@@ -3,7 +3,9 @@ package com.ecommerce.francoraspo.models.entities;
 
 import com.ecommerce.francoraspo.models.authJwtModels.RolSeguridad;
 import com.fasterxml.jackson.annotation.JsonIgnore;
-import lombok.*;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
@@ -23,15 +25,22 @@ import java.util.Set;
 public class Usuario {
     @Id
     private String id;
-    @Column(nullable = false) @NotBlank @Size(max = 20)
+    @Column(nullable = false)
+    @NotBlank
+    @Size(max = 20)
     private String usuarioNombre;
-    @Column(nullable = false) @NotBlank @Size(max = 50)  @Email
+    @Column(nullable = false)
+    @NotBlank
+    @Size(max = 50)
+    @Email
     private String email;
-    @JsonIgnore @NotBlank   @Size(max = 120)
+    @JsonIgnore
+    @NotBlank
+    @Size(max = 120)
     private String clave;
-    @Column(name="telefono", nullable = false, length = 100)
+    @Column(name = "telefono", nullable = false, length = 100)
     private String telefono;
-    @Column(name="nombre", nullable = false, length = 100)
+    @Column(name = "nombre", nullable = false, length = 100)
     private String nombre;
 
     public Usuario(String usuarioNombre, String email, String clave, String telefono, String nombre) {
@@ -44,6 +53,7 @@ public class Usuario {
 
     @DBRef
     private Set<RolSeguridad> roles = new HashSet<>();
+
     public Set<RolSeguridad> getRoles() {
         return roles;
     }
@@ -51,5 +61,6 @@ public class Usuario {
     public void setRoles(Set<RolSeguridad> roles) {
         this.roles = roles;
     }
+
 
 }

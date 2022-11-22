@@ -2,6 +2,7 @@ package com.ecommerce.francoraspo.controllers;
 
 import com.ecommerce.francoraspo.handlers.exceptions.ApiRestException;
 import com.ecommerce.francoraspo.handlers.exceptions.EntityNotFoundException;
+import com.ecommerce.francoraspo.handlers.exceptions.NoAuthorizedException;
 import com.ecommerce.francoraspo.models.entities.Producto;
 import com.ecommerce.francoraspo.models.entities.ProductoItem;
 import com.ecommerce.francoraspo.models.requests.ProductoRequest;
@@ -17,7 +18,6 @@ import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.net.URI;
 import java.time.Instant;
 import java.util.List;
 import java.util.Optional;
@@ -61,12 +61,14 @@ public class ProductoController {
     }
 
     @DeleteMapping(value = "producto/{id}", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<?> deleteProductoById(@PathVariable(name = "id") final String id) throws EntityNotFoundException {
+    public ResponseEntity<?> deleteProductoById(@PathVariable(name = "id") final String id) throws EntityNotFoundException, NoAuthorizedException {
         logger.info("DELETE /api/producto/{id}");
 
         final Optional<Producto> producto = productoService.eliminarProductoById(id);
         if (producto.isPresent()) {
-            return ResponseEntity.ok(producto);
+            final Response<ProductoItem> result = new Response(Instant.now(), producto,
+                    HttpStatus.OK.value(), "Success");
+            return new ResponseEntity<>(result, HttpStatus.OK);
         } else {
             logger.info("Entidad no encontrada /api/producto/" + id);
             throw new EntityNotFoundException("El producto con ID " + id + " no existe.");
@@ -74,24 +76,29 @@ public class ProductoController {
     }
 
     @PostMapping(value = "producto", consumes = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<?> newProducto(@Valid @RequestBody ProductoRequest productoRequest) throws ApiRestException {
+    public ResponseEntity<?> newProducto(@Valid @RequestBody ProductoRequest productoRequest) throws ApiRestException, NoAuthorizedException {
         logger.info("POST /api/producto");
         logger.debug(productoRequest);
 
-
         try {
             final Producto producto = productoService.nuevoProducto(productoRequest);
-            return ResponseEntity.created(URI.create("")).body(producto);
+            final Response<ProductoItem> result = new Response(Instant.now(), producto,
+                    HttpStatus.CREATED.value(), "Success");
+            return new ResponseEntity<>(result, HttpStatus.CREATED);
+        } catch (NoAuthorizedException e) {
+            logger.error(e.getMessage());
+            throw e;
         } catch (Exception e) {
             logger.error(e.getMessage());
             throw new ApiRestException(e.getMessage());
         }
     }
 
+
     @PutMapping(value = "producto/{id}", produces = {MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<?> updateProducto(@PathVariable(name = "id") final String id,
-                                            @Valid @RequestBody final ProductoRequest productoRequest) throws ApiRestException, EntityNotFoundException {
+                                            @Valid @RequestBody final ProductoRequest productoRequest) throws ApiRestException, EntityNotFoundException, NoAuthorizedException {
         logger.info("PUT /api/producto/{id}");
         logger.debug(productoRequest);
 
@@ -101,11 +108,14 @@ public class ProductoController {
             try {
                 final Optional<Producto> productoGuardado = productoService.actualizarProducto(id, productoRequest);
                 if (productoGuardado.isPresent()) {
-                    final Response<ProductoItem> result = new Response(Instant.now(), productoGuardado, 200, "Success");
+                    final Response<ProductoItem> result = new Response(Instant.now(), productoGuardado,
+                            HttpStatus.OK.value(), "Success");
                     return new ResponseEntity<>(result, HttpStatus.OK);
                 } else {
                     throw new ApiRestException("No se pudo actualizar el producto " + id);
                 }
+            } catch (NoAuthorizedException e) {
+                throw e;
             } catch (Exception e) {
                 throw new ApiRestException(e.getMessage());
             }

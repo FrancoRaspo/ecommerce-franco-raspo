@@ -2,7 +2,7 @@ server:
   port: 8081
 spring:
   application:
-    name: ecommerce-main
+    name: ecommerce-dev
   output:
     ansi:
       enabled: always
@@ -18,7 +18,7 @@ spring:
     mongodb:
       host: localhost
       port: 27018
-      database: ecommerce
+      database: ecommerce-dev
 security:
   app:
     jwt:

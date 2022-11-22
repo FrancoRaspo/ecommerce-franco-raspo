@@ -2,13 +2,13 @@ package com.ecommerce.francoraspo.controllers;
 
 import com.ecommerce.francoraspo.handlers.exceptions.ApiRestException;
 import com.ecommerce.francoraspo.handlers.exceptions.EntityNotFoundException;
-import com.ecommerce.francoraspo.models.authJwtModels.UserDetailsImpl;
 import com.ecommerce.francoraspo.models.entities.Orden;
 import com.ecommerce.francoraspo.models.entities.ProductoItem;
 import com.ecommerce.francoraspo.models.requests.OrdenRequest;
 import com.ecommerce.francoraspo.models.requests.ProductoItemRequest;
 import com.ecommerce.francoraspo.models.responses.Response;
 import com.ecommerce.francoraspo.services.OrdenService;
+import com.ecommerce.francoraspo.services.security.UserDetailsService;
 import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -16,11 +16,9 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.MediaType;
 import org.springframework.http.ResponseEntity;
-import org.springframework.security.core.context.SecurityContextHolder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
-import java.net.URI;
 import java.time.Instant;
 import java.util.Optional;
 
@@ -34,12 +32,6 @@ public class OrdenController {
     private final OrdenService ordenService;
 
     Logger logger = LogManager.getLogger(OrdenController.class);
-
-    private String UsuarioOrden() {
-        UserDetailsImpl userDetails = (UserDetailsImpl) SecurityContextHolder.getContext()
-                .getAuthentication().getPrincipal();
-        return userDetails.getUsername();
-    }
 
     @ResponseStatus(HttpStatus.OK)
     @GetMapping(value = "orden/{id}", produces = {MediaType.APPLICATION_JSON_VALUE})
@@ -57,7 +49,8 @@ public class OrdenController {
     }
 
     @GetMapping(value = "orden/{id}/producto", produces = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<?> obtenerProductosOrdenById(@PathVariable(name = "id") final String id) throws EntityNotFoundException {
+    public ResponseEntity<?> obtenerProductosOrdenById(@PathVariable(name = "id") final String id)
+            throws EntityNotFoundException {
         logger.info("GET /api/orden/{id}/producto");
         final Optional<Orden> orden = ordenService.obtenerOrdenById(id);
 
@@ -76,7 +69,9 @@ public class OrdenController {
         final Optional<Orden> orden = ordenService.eliminarOrdenById(id);
 
         if (orden.isPresent()) {
-            return ResponseEntity.ok(orden);
+            final Response<ProductoItem> result = new Response(Instant.now(), orden.get(),
+                    HttpStatus.OK.value(), "Success");
+            return new ResponseEntity<>(result, HttpStatus.OK);
         } else {
             logger.info("Entidad no encontrada /api/orden/" + id);
             throw new EntityNotFoundException("La orden con ID " + id + " no existe.");
@@ -89,23 +84,25 @@ public class OrdenController {
         logger.debug(ordenRequest);
 
         try {
-            final Optional<Orden> orden = ordenService.nuevaOrden(ordenRequest, UsuarioOrden());
-            return ResponseEntity.created(URI.create("")).body(orden.get());
+            final Optional<Orden> orden = ordenService.nuevaOrden(ordenRequest, UserDetailsService.UsuarioContext());
+            final Response<ProductoItem> result = new Response(Instant.now(), orden.get(),
+                    HttpStatus.CREATED.value(), "Success");
+            return new ResponseEntity<>(result, HttpStatus.CREATED);
         } catch (Exception e) {
             logger.error(e.getMessage());
             throw new ApiRestException(e.getMessage());
         }
     }
 
-    @PostMapping(value = "orden/carrito/", consumes = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<?> newOrdenCarrito(
-            @Valid @RequestBody OrdenRequest ordenRequest) throws ApiRestException {
+    @PostMapping(value = "orden/carrito")
+    public ResponseEntity<?> newOrdenCarrito() throws ApiRestException {
         logger.info("POST /api/orden/carrito");
-        logger.debug(ordenRequest);
 
         try {
-            final Optional<Orden> orden = ordenService.nuevaOrdenByCarritoUsuarioNombre(ordenRequest, UsuarioOrden());
-            return ResponseEntity.created(URI.create("")).body(orden.get());
+            final Optional<Orden> orden = ordenService.nuevaOrdenByCarritoUsuarioNombre(UserDetailsService.UsuarioContext());
+            final Response<ProductoItem> result = new Response(Instant.now(), orden.get(),
+                    HttpStatus.CREATED.value(), "Success");
+            return new ResponseEntity<>(result, HttpStatus.CREATED);
         } catch (Exception e) {
             logger.error(e.getMessage());
             throw new ApiRestException(e.getMessage());
@@ -114,9 +111,10 @@ public class OrdenController {
 
     @PostMapping(value = "orden/{id}/producto/{productoId}", produces = {MediaType.APPLICATION_JSON_VALUE},
             consumes = {MediaType.APPLICATION_JSON_VALUE})
-    public ResponseEntity<?> updateItemOrden(@PathVariable(name = "id") final String id,
-                                             @PathVariable(name = "productoId") final String productoId,
-                                             @Valid @RequestBody final ProductoItemRequest ordenItemRequest) throws EntityNotFoundException, ApiRestException {
+    public ResponseEntity<?> ingresarItemOrden(@PathVariable(name = "id") final String id,
+                                               @PathVariable(name = "productoId") final String productoId,
+                                               @Valid @RequestBody final ProductoItemRequest ordenItemRequest)
+            throws EntityNotFoundException, ApiRestException {
         logger.info("POST /api/orden/{id}/producto/{productoId}");
         logger.debug(ordenItemRequest);
 
@@ -126,11 +124,69 @@ public class OrdenController {
 
 
             if (ordenItemGuardado.isPresent()) {
-                final Response<ProductoItem> result = new Response(Instant.now(), ordenItemGuardado, 200, "Success");
-                return new ResponseEntity<>(result, HttpStatus.OK);
+                final Response<ProductoItem> result = new Response(Instant.now(), ordenItemGuardado,
+                        HttpStatus.CREATED.value(), "Success");
+                return new ResponseEntity<>(result, HttpStatus.CREATED);
+
             } else {
                 logger.error("No se pudo ingresar el producto " + productoId + " a la orden.");
                 throw new ApiRestException("No se pudo ingresar el producto " + productoId + " a la orden.");
+            }
+        } catch (EntityNotFoundException nfe) {
+            logger.debug(nfe.getMessage());
+            throw nfe;
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            throw new ApiRestException(e.getMessage());
+        }
+
+
+    }
+
+    @PatchMapping(value = "orden/{id}/cerrar", produces = {MediaType.APPLICATION_JSON_VALUE})
+    public ResponseEntity<?> cerrarOrdenById(@PathVariable(name = "id") final String id)
+            throws EntityNotFoundException, ApiRestException {
+        logger.info("PATCH orden/{id}/cerrar");
+
+        try {
+            Optional<Orden> ordenGuardada = ordenService.cerrarOrdenById(id);
+
+            if (ordenGuardada.isPresent()) {
+                final Response<Orden> result = new Response(Instant.now(), ordenGuardada,
+                        HttpStatus.OK.value(), "Success");
+                return new ResponseEntity<>(result, HttpStatus.OK);
+
+            } else {
+                logger.error("No se pudo cerrar la orden " + id);
+                throw new ApiRestException("No se pudo cerrar la orden " + id);
+            }
+        } catch (EntityNotFoundException nfe) {
+            logger.debug(nfe.getMessage());
+            throw nfe;
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            throw new ApiRestException(e.getMessage());
+        }
+
+
+    }
+
+    @PatchMapping(value = "orden/{id}/anular", produces = {MediaType.APPLICATION_JSON_VALUE})
+    public ResponseEntity<?> anularOrdenById(@PathVariable(name = "id") final String id)
+            throws EntityNotFoundException, ApiRestException {
+        logger.info("PATCH orden/{id}/anular");
+
+        try {
+            Optional<Orden> ordenGuardada = ordenService.cerrarOrdenById(id);
+
+            if (ordenGuardada.isPresent()) {
+                final Response<Orden> result = new Response(Instant.now(), ordenGuardada,
+                        HttpStatus.OK.value(), "Success");
+                return new ResponseEntity<>(result, HttpStatus.OK);
+
+            } else {
+                logger.error("No se pudo anular la orden " + id);
+                throw new ApiRestException("No se pudo anular la orden " + id);
             }
         } catch (EntityNotFoundException nfe) {
             logger.debug(nfe.getMessage());
@@ -147,7 +203,8 @@ public class OrdenController {
             consumes = {MediaType.APPLICATION_JSON_VALUE})
     public ResponseEntity<?> deleteItemOrden(@PathVariable(name = "id") final String id,
                                              @PathVariable(name = "productoId") final String productoId,
-                                             @Valid @RequestBody final ProductoItemRequest ordenItemRequest) throws EntityNotFoundException, ApiRestException {
+                                             @Valid @RequestBody final ProductoItemRequest ordenItemRequest)
+            throws EntityNotFoundException, ApiRestException {
         logger.info("DELETE /api/orden/{id}/producto/{productoId}");
         logger.debug(ordenItemRequest);
         try {
@@ -155,7 +212,8 @@ public class OrdenController {
                     productoId, ordenItemRequest.getCantidad());
 
             if (ordenItemGuardado.isPresent()) {
-                final Response<ProductoItem> result = new Response(Instant.now(), ordenItemGuardado, 200, "Success");
+                final Response<ProductoItem> result = new Response(Instant.now(), ordenItemGuardado,
+                        HttpStatus.OK.value(), "Success");
                 return new ResponseEntity<>(result, HttpStatus.OK);
             } else {
                 logger.error("No se pudo eliminar el producto " + productoId + " a la orden.");

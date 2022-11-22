@@ -31,18 +31,14 @@ public class Carrito {
     private String usuarioNombre;
 
     public ProductoItem actualizaItem(ProductoItem carritoItem) {
-
-
-
         if (productoItems == null) {
             productoItems = new ArrayList<>();
         }
 
         if (!productoItems.contains(carritoItem)) {
-            if (carritoItem.getCantidad() > 0 ) {
+            if (carritoItem.getCantidad() > 0) {
                 productoItems.add(carritoItem);
-            }
-            else {
+            } else {
                 carritoItem.setCantidad(0);
             }
             return carritoItem;

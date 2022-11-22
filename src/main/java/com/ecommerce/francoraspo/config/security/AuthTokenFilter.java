@@ -1,6 +1,6 @@
 package com.ecommerce.francoraspo.config.security;
 
-import com.ecommerce.francoraspo.services.UsuarioServiceImpl;
+import com.ecommerce.francoraspo.services.security.UserDetailsServiceImpl;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -22,7 +22,7 @@ public class AuthTokenFilter extends OncePerRequestFilter {
     private JwtUtils jwtUtils;
 
     @Autowired
-    private UsuarioServiceImpl userDetailsService;
+    private UserDetailsServiceImpl userDetailsService;
 
     Logger logger = LogManager.getLogger(AuthTokenFilter.class);
 

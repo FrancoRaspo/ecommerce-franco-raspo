@@ -1,7 +1,7 @@
 package com.ecommerce.francoraspo.config.security;
 
 
-import com.ecommerce.francoraspo.services.UsuarioServiceImpl;
+import com.ecommerce.francoraspo.services.security.UserDetailsServiceImpl;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
@@ -20,10 +20,11 @@ import org.springframework.security.web.authentication.UsernamePasswordAuthentic
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(
-        prePostEnabled = true)
+        prePostEnabled = true,
+        securedEnabled = true)
 public class AuthWebSecurityConfiguration {
     @Autowired
-    UsuarioServiceImpl userDetailsService;
+    UserDetailsServiceImpl userDetailsService;
 
     @Autowired
     private AuthEntryPointJwt unauthorizedHandler;
@@ -60,6 +61,8 @@ public class AuthWebSecurityConfiguration {
                 .sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
                 .authorizeRequests().antMatchers("/api/auth/**").permitAll()
                 .antMatchers("/api/test/**").permitAll()
+                //.antMatchers(HttpMethod.POST, "/api/producto/**").hasAuthority(ERolSeguridad.ADMINISTRADOR.toString())
+                //.antMatchers(HttpMethod.DELETE, "/api/producto/**").hasAuthority(ERolSeguridad.ADMINISTRADOR.toString())
                 .anyRequest().authenticated();
 
         http.authenticationProvider(authenticationProvider());

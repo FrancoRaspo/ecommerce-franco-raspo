@@ -3,5 +3,5 @@ spring:
     name: ecommerce-uat
   cloud:
     config:
-      uri: http://localhost:8080
-      name: ecommerce-uat
+      uri: http://localhost:8888
+      name: bootstrap-uat

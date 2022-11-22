@@ -11,12 +11,17 @@ import java.util.Set;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-public class UsuarioRequest {
+public class UsuarioNewRequest {
+    @NotNull @NotBlank
     private String nombre;
+    @NotNull @NotBlank
     private String telefono;
     @NotNull @NotBlank
     private String nombreUsuario;
+    @NotNull @NotBlank
     private String clave;
+    @NotNull @NotBlank
     private String email;
+    @NotNull
     private Set<String> roles;
 }

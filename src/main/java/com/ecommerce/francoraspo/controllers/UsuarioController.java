@@ -4,15 +4,15 @@ package com.ecommerce.francoraspo.controllers;
 import com.ecommerce.francoraspo.config.security.JwtUtils;
 import com.ecommerce.francoraspo.handlers.exceptions.ApiRestException;
 import com.ecommerce.francoraspo.handlers.exceptions.EntityNotFoundException;
-import com.ecommerce.francoraspo.models.authJwtModels.RolSeguridad;
+import com.ecommerce.francoraspo.handlers.exceptions.NoAuthorizedException;
 import com.ecommerce.francoraspo.models.authJwtModels.UserDetailsImpl;
 import com.ecommerce.francoraspo.models.entities.Usuario;
-import com.ecommerce.francoraspo.models.enums.ERolSeguridad;
 import com.ecommerce.francoraspo.models.requests.LoginRequest;
+import com.ecommerce.francoraspo.models.requests.UsuarioNewRequest;
 import com.ecommerce.francoraspo.models.requests.UsuarioRequest;
 import com.ecommerce.francoraspo.models.responses.JwtResponse;
-import com.ecommerce.francoraspo.repositories.RoleRepository;
-import com.ecommerce.francoraspo.repositories.UsuarioRepository;
+import com.ecommerce.francoraspo.models.responses.Response;
+import com.ecommerce.francoraspo.services.UsuarioService;
 import lombok.RequiredArgsConstructor;
 import org.apache.logging.log4j.LogManager;
 import org.apache.logging.log4j.Logger;
@@ -23,32 +23,31 @@ import org.springframework.security.authentication.AuthenticationManager;
 import org.springframework.security.authentication.UsernamePasswordAuthenticationToken;
 import org.springframework.security.core.Authentication;
 import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.web.bind.annotation.*;
 
 import javax.validation.Valid;
 import java.io.UnsupportedEncodingException;
-import java.util.*;
+import java.time.Instant;
+import java.util.List;
+import java.util.Optional;
 import java.util.stream.Collectors;
 
 @RestController
-@RequestMapping("/api/auth")
+@RequestMapping("/api")
 @RequiredArgsConstructor
 public class UsuarioController {
     @Autowired
     AuthenticationManager authenticationManager;
     @Autowired
-    UsuarioRepository userNewRepository;
-    @Autowired
-    RoleRepository roleRepository;
-    @Autowired
-    PasswordEncoder encoder;
+    UsuarioService usuarioService;
+
     @Autowired
     JwtUtils jwtUtils;
 
     Logger logger = LogManager.getLogger(UsuarioController.class);
 
-    @PostMapping("/signin")
+
+    @PostMapping("/auth/signin")
     public ResponseEntity<?> authenticateUser(@Valid @RequestBody LoginRequest loginRequest) throws UnsupportedEncodingException {
         Authentication authentication = authenticationManager.authenticate(
                 new UsernamePasswordAuthenticationToken(loginRequest.getUsuarioNombre(), loginRequest.getClave()));
@@ -73,140 +72,87 @@ public class UsuarioController {
         );
     }
 
-    @PostMapping("/usuario")
-    public ResponseEntity<?> registerUser(@Valid @RequestBody UsuarioRequest signUpRequest) throws ApiRestException {
+    @PostMapping("/auth/usuario")
+    public ResponseEntity<?> registerUser(@Valid @RequestBody UsuarioNewRequest usuarioRequest) throws ApiRestException, NoAuthorizedException {
 
         logger.info("POST /api/auth/usuario");
-        logger.debug(signUpRequest.toString());
 
-        if (userNewRepository.existsByUsuarioNombre(signUpRequest.getNombreUsuario())) {
-            throw new ApiRestException("Ya existe un usuario con ese nombre");
+        try {
+            Optional<Usuario> usuario = usuarioService.nuevoUsuario(usuarioRequest);
+
+            if (usuario.isPresent()) {
+                final Response<String> result = new Response(Instant.now(), "Usuario registrado con exito!" ,
+                        HttpStatus.CREATED.value(), "Success");
+                return new ResponseEntity<>(result, HttpStatus.CREATED);
+            } else {
+                throw new ApiRestException("Ocurrió un error al registrar el usuario.");
+            }
+        } catch (NoAuthorizedException e) {
+            throw new NoAuthorizedException(e.getMessage());
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            throw new ApiRestException(e.getMessage());
         }
-
-        if (userNewRepository.existsByEmail(signUpRequest.getEmail())) {
-            throw new ApiRestException("Ya hay registrado un usuario con ese e-mail");
-        }
-
-        // Create new user's account
-        Usuario user = new Usuario(signUpRequest.getNombreUsuario(),
-                signUpRequest.getEmail(),
-                encoder.encode(signUpRequest.getClave()),
-                signUpRequest.getTelefono(),
-                signUpRequest.getNombre()
-
-                );
-
-        Set<String> strRoles = signUpRequest.getRoles();
-        Set<RolSeguridad> roles = new HashSet<>();
-
-        if (strRoles == null) {
-            RolSeguridad userRole = roleRepository.findByName(ERolSeguridad.USUARIO)
-                    .orElseThrow(() -> new RuntimeException("El rol " + ERolSeguridad.USUARIO + " no existe."));
-            roles.add(userRole);
-        } else {
-            strRoles.forEach(role -> {
-                switch (role) {
-                    case "administrador":
-                        RolSeguridad adminRole = roleRepository.findByName(ERolSeguridad.ADMINISTRADOR)
-                                .orElseThrow(() -> new RuntimeException("El rol " + ERolSeguridad.ADMINISTRADOR + " no existe."));
-                        roles.add(adminRole);
-
-                        break;
-                    case "invitado":
-                        RolSeguridad modRole = roleRepository.findByName(ERolSeguridad.INVITADO)
-                                .orElseThrow(() -> new RuntimeException("El rol " + ERolSeguridad.INVITADO + " no existe."));
-                        roles.add(modRole);
-
-                        break;
-                    default:
-                        RolSeguridad userRole = roleRepository.findByName(ERolSeguridad.USUARIO)
-                                .orElseThrow(() -> new RuntimeException("El rol " + ERolSeguridad.USUARIO + " no existe."));
-                        roles.add(userRole);
-                }
-            });
-        }
-        user.setRoles(roles);
-        userNewRepository.save(user);
-
-        return new ResponseEntity<>("Usuario registrado con exito!", HttpStatus.OK);
     }
 
     @PatchMapping("/usuario")
-    public ResponseEntity<?> actualizaUser(@Valid @RequestBody UsuarioRequest signUpRequest) throws ApiRestException, EntityNotFoundException {
+    public ResponseEntity<?> actualizaUser(@Valid @RequestBody UsuarioRequest usuarioRequest) throws ApiRestException, EntityNotFoundException {
 
-        logger.info("PATCH /api/auth/usuario");
+        logger.info("PATCH /api/usuario");
 
-        Optional<Usuario> user =
-                userNewRepository.findByUsuarioNombre(signUpRequest.getNombreUsuario());
+        try {
+            Optional<Usuario> usuario = usuarioService.actualizarUsuario(usuarioRequest);
 
-        if(user.isEmpty()) {
-            throw new EntityNotFoundException("No existe un usuario con ese nombre");
+            if (usuario.isPresent()) {
+                final Response<String> result = new Response(Instant.now(), "Usuario actualizado con éxito!" ,
+                        HttpStatus.OK.value(), "Success");
+                return new ResponseEntity<>(result, HttpStatus.OK);
+            } else {
+                logger.error("Ocurrió un error al actualizar el usuario");
+                throw new ApiRestException("Ocurrió un error al actualizar el usuario");
+            }
+        } catch (NoAuthorizedException nae) {
+            logger.info("Acceso denegado!");
+            final Response<String> result = new Response(Instant.now(), "Acceso denegado!" ,
+                    HttpStatus.UNAUTHORIZED.value(), "Success");
+            return new ResponseEntity<>(result, HttpStatus.UNAUTHORIZED);
+        } catch (EntityNotFoundException entityNotFoundException) {
+            logger.error(entityNotFoundException.getMessage());
+            throw entityNotFoundException;
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            throw new ApiRestException(e.getMessage());
         }
-
-        Usuario usuario = user.get();
-
-        List<Usuario> userList =
-                userNewRepository.findAllByEmail(signUpRequest.getEmail()).stream()
-                        .filter(u -> !u.getUsuarioNombre().equals(signUpRequest.getNombreUsuario()) )
-                        .collect(Collectors.toList());
-
-        if (userList.size() != 0) {
-            throw new ApiRestException("Ya hay registrado un usuario con ese e-mail");
-        }
-
-
-
-        Set<String> strRoles = signUpRequest.getRoles();
-        Set<RolSeguridad> roles = new HashSet<>();
-
-        if (strRoles == null) {
-            RolSeguridad userRole = roleRepository.findByName(ERolSeguridad.USUARIO)
-                    .orElseThrow(() -> new RuntimeException("El rol " + ERolSeguridad.USUARIO + " no existe."));
-            roles.add(userRole);
-        } else {
-            strRoles.forEach(role -> {
-                switch (role) {
-                    case "administrador":
-                        RolSeguridad adminRole = roleRepository.findByName(ERolSeguridad.ADMINISTRADOR)
-                                .orElseThrow(() -> new RuntimeException("El rol " + ERolSeguridad.ADMINISTRADOR + " no existe."));
-                        roles.add(adminRole);
-
-                        break;
-                    case "invitado":
-                        RolSeguridad modRole = roleRepository.findByName(ERolSeguridad.INVITADO)
-                                .orElseThrow(() -> new RuntimeException("El rol " + ERolSeguridad.INVITADO + " no existe."));
-                        roles.add(modRole);
-
-                        break;
-                    default:
-                        RolSeguridad userRole = roleRepository.findByName(ERolSeguridad.USUARIO)
-                                .orElseThrow(() -> new RuntimeException("El rol " + ERolSeguridad.USUARIO + " no existe."));
-                        roles.add(userRole);
-                }
-            });
-        }
-        usuario.setRoles(roles);
-        userNewRepository.save(usuario);
-
-        return new ResponseEntity<>("Usuario actualizado con éxito!", HttpStatus.OK);
     }
 
     @DeleteMapping("/usuario/{nombreUsuario}")
     public ResponseEntity<?> deleteUser(@PathVariable(name = "nombreUsuario") String nombreUsuario) throws ApiRestException, EntityNotFoundException {
 
-        logger.info("DELETE /api/auth/usuario/{nombreUsuario}");
+        logger.info("DELETE /api/usuario/{nombreUsuario}");
 
-        Optional<Usuario> user =
-                userNewRepository.findByUsuarioNombre(nombreUsuario);
+        try {
+            Optional<Usuario> usuario = usuarioService.eliminarUsuario(nombreUsuario);
 
-        if(user.isEmpty()) {
-            throw new EntityNotFoundException("No existe un usuario con ese nombre");
+            if (usuario.isPresent()) {
+                final Response<String> result = new Response(Instant.now(), "Usuario eliminado con éxito!" ,
+                        HttpStatus.OK.value(), "Success");
+                return new ResponseEntity<>(result, HttpStatus.OK);
+            } else {
+                logger.error("Ocurrió un error al eliminar el usuario");
+                throw new ApiRestException("Ocurrió un error al eliminar el usuario");
+            }
+
+        } catch (NoAuthorizedException nae) {
+            logger.info("Acceso denegado!");
+            final Response<String> result = new Response(Instant.now(), "Acceso denegado!" ,
+                    HttpStatus.UNAUTHORIZED.value(), "Success");
+            return new ResponseEntity<>(result, HttpStatus.UNAUTHORIZED);
+        } catch (EntityNotFoundException entityNotFoundException) {
+            logger.error(entityNotFoundException.getMessage());
+            throw entityNotFoundException;
+        } catch (Exception e) {
+            logger.error(e.getMessage());
+            throw new ApiRestException(e.getMessage());
         }
-
-        Usuario usuario = user.get();
-
-        userNewRepository.delete(usuario);
-
-        return new ResponseEntity<>("Usuario eliminado con éxito!", HttpStatus.OK);
     }
 }

@@ -3,5 +3,5 @@ spring:
     name: ecommerce-dev
   cloud:
     config:
-      uri: http://localhost:8080
-      name: ecommerce-dev
+      uri: http://localhost:8888
+      name: bootstrap-dev

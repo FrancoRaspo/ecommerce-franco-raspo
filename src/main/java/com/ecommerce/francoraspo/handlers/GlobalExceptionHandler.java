@@ -2,7 +2,10 @@ package com.ecommerce.francoraspo.handlers;
 
 import com.ecommerce.francoraspo.handlers.exceptions.ApiRestException;
 import com.ecommerce.francoraspo.handlers.exceptions.EntityNotFoundException;
+import com.ecommerce.francoraspo.handlers.exceptions.NoAuthorizedException;
 import com.ecommerce.francoraspo.models.responses.Response;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.validation.FieldError;
@@ -19,8 +22,12 @@ import java.util.Map;
 
 @ControllerAdvice
 public class GlobalExceptionHandler {
+
+    Logger logger = LogManager.getLogger(GlobalExceptionHandler.class);
+
     @ExceptionHandler(RuntimeException.class)
     public ResponseEntity<Response> runtimeException(RuntimeException e) {
+        logger.error(e.getMessage());
         final Response<String> result = new Response(Instant.now(), "[RuntimeException Response] - Exception: Error desconocido " + e.getMessage(), 501, "Error");
         return new ResponseEntity<>(result, HttpStatus.INTERNAL_SERVER_ERROR);
     }
@@ -29,6 +36,7 @@ public class GlobalExceptionHandler {
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(ApiRestException.class)
     public ResponseEntity<Response> messageErrorApiRestException(final ApiRestException e) {
+        logger.error(e.getMessage());
         final Response<String> result = new Response(
                 Instant.now(),
                 "ApiRestException: " + e.getMessage(),
@@ -39,9 +47,24 @@ public class GlobalExceptionHandler {
     }
 
     @ResponseBody
+    @ResponseStatus(HttpStatus.UNAUTHORIZED)
+    @ExceptionHandler(NoAuthorizedException.class)
+    public ResponseEntity<Response> messageErrorNoAuthorizedException(final NoAuthorizedException e) {
+        logger.error(e.getMessage());
+        final Response<String> result = new Response(
+                Instant.now(),
+                "NoAuthorizedException: " + e.getMessage(),
+                HttpStatus.UNAUTHORIZED.value(),
+                "Acceso denegado");
+
+        return new ResponseEntity<>(result, HttpStatus.UNAUTHORIZED);
+    }
+
+    @ResponseBody
     @ResponseStatus(HttpStatus.BAD_REQUEST)
     @ExceptionHandler(EntityNotFoundException.class)
     public ResponseEntity<Response> messageErrorEntityNotFoundException(final EntityNotFoundException e) {
+        logger.error(e.getMessage());
         final Response<String> result = new Response(
                 Instant.now(),
                 "EntityNotFoundException: " + e.getMessage(),
@@ -57,6 +80,7 @@ public class GlobalExceptionHandler {
     @ExceptionHandler(MethodArgumentNotValidException.class)
     public Map<String, String> handleValidationExceptions(
             final MethodArgumentNotValidException ex) {
+
         final Map<String, String> errors = new HashMap<>();
 
         ex.getBindingResult().getAllErrors().forEach((error) -> {
@@ -64,6 +88,8 @@ public class GlobalExceptionHandler {
             final String errorMessage = error.getDefaultMessage();
             errors.put(fieldName, errorMessage);
         });
+
+        logger.debug(errors.toString());
         return errors;
     }
 }
