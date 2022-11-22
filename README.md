@@ -1,7 +1,7 @@
 # ecommerce-franco-raspo
 Proyecto final de curso CoderHouse Java
 
-El proyecto utiliza un config server para optener los ambientes de UAT y producción
+El proyecto utiliza un config server para obtener los ambientes de UAT y producción
 Los archivos de BootStrap se alojan en GitHub.
 
 El proyecto de config server está en GitHub link https://github.com/FrancoRaspo/ecommerce-franco-raspo-config-server
@@ -12,11 +12,26 @@ Se necesita un repositorio MongoDB.
 #### Repositorio - MongoDB - Docker
 docker run -d -p 27018:27017 --name ecommerce mongo:latest
 
+Hay 3 ambientes para hacer las pruebas: Dev, UAT y Prod.
+Los archivos de "environment" para Postman:
+
+### Test e-commerce Dev.postman_environment.json
+Datos de ambiente de Desarrollo para Postman
+
+### Test e-commerce Prod.postman_environment.json
+Datos de ambiente de Producción para Postman
+
+### Test e-commerce UAT.postman_environment.json
+Datos de ambiente de Testing para Postman
+
 ## Archivos - Test - Postman
 Carpeta: /ecommerce-franco-raspo/src/main/resources/postman/
 Configuración de Test de Postman
 
-### CoderHouse.postman_collection.json - Test
+En la carpeta Testing-ecommerce, se pueden correr todos los test juntos con "Run Folder".
+
+
+### CoderHouse.postman_collection.json
 * Caso 0 - Inicio aplicación - primer usuario administrador: 
   En la primera ejecución se puede crear un usuario administrador sin necesidad de iniciar sesión,
   luego al existir algún usuario solo usuarios con el rol de administrador pueden crear usuarios con ese rol.
@@ -40,14 +55,4 @@ Configuración de Test de Postman
   Un usuario normal solamnete puede modificar sus datos
 * Caso 10 - Usuario cambia la clave y se loguea con su nueva clave: 
   Un usuario puede camibar su clave y usarla en un nuevo loguin
-
-### Test e-commerce Dev.postman_environment.json
-Datos de ambiente de Desarrollo para Postman
-
-### Test e-commerce Prod.postman_environment.json
-Datos de ambiente de Producción para Postman
-
-### Test e-commerce UAT.postman_environment.json
-Datos de ambiente de Testing para Postman
-
 

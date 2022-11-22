@@ -812,3 +812,5 @@
 [2022-11-21 23:35:03] http-nio-8081-exec-4 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
 [2022-11-21 23:35:03] http-nio-8081-exec-6 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
 [2022-11-21 23:35:03] http-nio-8081-exec-8 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-22 14:33:30] http-nio-8081-exec-4 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-22 14:33:30] http-nio-8081-exec-4 ERROR c.e.f.c.UsuarioController                               >> Ya existe un usuario con ese nombre 

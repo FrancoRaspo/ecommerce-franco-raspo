@@ -828,6 +828,38 @@
 							"response": []
 						},
 						{
+							"name": "Usuario visualiza un productos",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Visto producto\", () => {\r",
+											"    pm.expect(pm.response.id).not.eq(undefined)\r",
+											"});  "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/producto/{{codigoDeProducto3}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"producto",
+										"{{codigoDeProducto3}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
 							"name": "Elimina 1 Item del producto 3  del Carrito",
 							"event": [
 								{

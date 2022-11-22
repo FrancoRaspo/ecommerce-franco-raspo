@@ -29,18 +29,24 @@ import java.util.Optional;
 public class ProductoServiceImp implements ProductoService {
     private final ProductoRepository productoRepository;
 
-    /**
-     * <h2>IsAdmin</h2>
-     *
-     * @author Franco Raspo
-     * @since 2022-11-21
-     */
-
     @Override
+    /**
+     * <h2>obtenerProductoById</h2>
+     * Se obtiene un Producto por su ID
+     * @author  Franco Raspo
+     * @since   2022-11-21
+     */
     public Optional<Producto> obtenerProductoById(String id) {
         return productoRepository.findById(id);
     }
 
+    /**
+     * <h2>eliminarProductoById</h2>
+     * Se elimina un Producto por su ID
+     * Solo usuarios Administradores tiene permiso
+     * @author  Franco Raspo
+     * @since   2022-11-21
+     */
     @Override
     @Transactional
     public Optional<Producto> eliminarProductoById(String id) throws NoAuthorizedException {
@@ -59,6 +65,13 @@ public class ProductoServiceImp implements ProductoService {
         }
     }
 
+    /**
+     * <h2>nuevoProducto</h2>
+     * Genera una nuevo producto
+     * Solo usuarios administradores tiene autorización
+     * @author  Franco Raspo
+     * @since   2022-11-21
+     */
     @Override
     @Transactional
     public Producto nuevoProducto(ProductoRequest productoRequest) throws NoAuthorizedException {
@@ -78,6 +91,13 @@ public class ProductoServiceImp implements ProductoService {
         return producto;
     }
 
+    /**
+     * <h2>actualizarProducto</h2>
+     * Actualiza un nuevo producto
+     * Solo usuarios administradores tiene autorización
+     * @author  Franco Raspo
+     * @since   2022-11-21
+     */
     @Override
     @Transactional
     public Optional<Producto> actualizarProducto(String id, ProductoRequest productoRequest) throws NoAuthorizedException {
@@ -104,6 +124,12 @@ public class ProductoServiceImp implements ProductoService {
 
     }
 
+    /**
+     * <h2>obtenerProductos</h2>
+     * Obtiene una lista de productos
+     * @author  Franco Raspo
+     * @since   2022-11-21
+     */
     @Override
     public List<Producto> obtenerProductos() {
         return productoRepository.findAll();

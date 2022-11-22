@@ -67,6 +67,7 @@ public class OrdenServiceImp implements OrdenService {
      * <h2>nuevaOrdenUsuario</h2>
      * Genera una nueva orden para un usuario
      * Puede recibir un documento Carrito para generar
+     * El número de orden se obtiene por la ultima orden cargado + 1
      * @author  Franco Raspo
      * @since   2022-11-21
      */
@@ -92,7 +93,10 @@ public class OrdenServiceImp implements OrdenService {
         //valores de la orden nueva
         orden.setUsuario(nombreUsuario);
         orden.setFechaCompra(LocalDateTime.now());
-        orden.setNumeroOrden(ordenRepository.count() + 1);
+
+        //Se busca la una orden ordenada por numeroOrden
+        Optional<Orden> ordenUltima = ordenRepository.findFirstByOrderByNumeroOrdenDesc();
+        orden.setNumeroOrden(ordenUltima.map(value -> value.getNumeroOrden() + 1).orElse(1l));
         orden.setEstado(EOrdenEstado.GENERADA);
         ordenRepository.save(orden);
 

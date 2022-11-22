@@ -19,7 +19,15 @@ import java.util.List;
 import java.util.Optional;
 import java.util.Set;
 import java.util.stream.Collectors;
-
+/**
+ * <h1>Usuario Service</h1>
+ * Esta clase administra los usuarios
+ * Solo los usuarios con Rol de administrador pueden administrar usuarios con rol de administrador
+ * Los usuario de la sesión solo pueden modificar sus datos
+ * @author Franco Raspo
+ * @version 1.0
+ * @since 2022-11-21
+ */
 @Service
 public class UsuarioServiceImpl implements UsuarioService {
     @Autowired
@@ -29,8 +37,12 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     @Autowired
     RoleRepository roleRepository;
-
-
+    /**
+     * <h2>prepararRoles</h2>
+     * Asigna los roles del usuario, por defecto se asigna el rol USUARIO
+     * @author  Franco Raspo
+     * @since   2022-11-21
+     */
     private Set<RolSeguridad> prepararRoles(Set<String> rolesUsuario) {
         Set<RolSeguridad> roles = new HashSet<>();
 
@@ -65,6 +77,15 @@ public class UsuarioServiceImpl implements UsuarioService {
 
     }
 
+    /**
+     * <h2>nuevoUsuario</h2>
+     * Crea un nuevo usuario
+     * Si la colección usuarios no tiene documento, se puede crear el primer usuario administrador
+     * Solo usuarios administradores pueden crear otros usuario con ese rol
+     * No se pueden repetir nombres de usuario, ni correos electrónicos
+     * @author  Franco Raspo
+     * @since   2022-11-21
+     */
     @Override
     public Optional<Usuario> nuevoUsuario(UsuarioNewRequest usuarioRequest) throws Exception {
 
@@ -98,6 +119,14 @@ public class UsuarioServiceImpl implements UsuarioService {
         return Optional.of(usuario);
     }
 
+    /**
+     * <h2>eliminarUsuario</h2>
+     * Elimina un nuevo usuario
+     * Solo usuarios administradores pueden eliminar usuarios varios
+     * Solo un usuario puede eliminarse a si mismo
+     * @author  Franco Raspo
+     * @since   2022-11-21
+     */
     @Override
     public Optional<Usuario> eliminarUsuario(String nombreUsuario) throws EntityNotFoundException, NoAuthorizedException {
 
@@ -121,6 +150,14 @@ public class UsuarioServiceImpl implements UsuarioService {
         }
     }
 
+    /**
+     * <h2>actualizarUsuario</h2>
+     * Actualiza los datos un usuario
+     * Solo usuarios administradores pueden modificar usuarios varios
+     * Solo un usuario puede actualizar los datos de si mismo
+     * @author  Franco Raspo
+     * @since   2022-11-21
+     */
     @Override
     public Optional<Usuario> actualizarUsuario(UsuarioRequest usuarioRequest) throws Exception {
         if (usuarioRequest.getNombreUsuario().equals(UserDetailsService.UsuarioContext()) ||

@@ -1,7 +1,26 @@
+server:
+  port: 8081
 spring:
   application:
     name: ecommerce-dev
-  cloud:
-    config:
-      uri: http://localhost:8888
-      name: bootstrap-dev
+  output:
+    ansi:
+      enabled: always
+  datasource:
+    url: jdbc:h2:mem:coder-dev
+    driverClassName: org.h2.Driver
+    username: username
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    defer-datasource-initialization: true
+  data:
+    mongodb:
+      host: localhost
+      port: 27018
+      database: ecommerce-dev
+security:
+  app:
+    jwt:
+      secret: 43fa8c533b9c1dd714d66532a030b2997af85450517e803e7a60e722866aac945906e112cd75b4f67fda7255223469c9b6a92b4e14f6fe99cd55e8acc265d21d
+      expiration: 100000
