@@ -1,0 +1,1813 @@
+{
+	"info": {
+		"_postman_id": "37f8da15-d6b7-4e5e-bcfa-5c96a83203e1",
+		"name": "CoderHouse",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "300912"
+	},
+	"item": [
+		{
+			"name": "Testing E-commerce",
+			"item": [
+				{
+					"name": "Caso 0 - Inicio aplicación - primer usuario administrador",
+					"item": [
+						{
+							"name": "Nuevo Usuario Admin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Usuario creado\", () => {\r",
+											"    pm.expect(pm.response.code).eq(201)\r",
+											"});                                        "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombreUsuario\" : \"{{usuarioAdmin}}\",\r\n    \"nombre\": \"{{$randomFullName}}\",\r\n    \"clave\" : \"{{claveAdmin}}\",\r\n    \"telefono\" : \"{{$randomPhoneNumber}}\",\r\n    \"email\" : \"{{$randomEmail}}\",\r\n    \"roles\" : [ \r\n        \"administrador\"\r\n    ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/auth/usuario",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"auth",
+										"usuario"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Caso 1 - El administrador crea nuevos 4 productos",
+					"item": [
+						{
+							"name": "Singin Usuario Admin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"pm.environment.set(\"token\",respuesta.token);\r",
+											"\r",
+											"pm.test(\"Se obtuvo token\", () => {\r",
+											"    pm.expect(respuesta.token).not.eq(undefined)\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuarioNombre\" : \"{{usuarioAdmin}}\",\r\n    \"clave\" : \"{{claveAdmin}}\" \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/auth/signin",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nuevo Producto 1",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"pm.environment.set(\"codigoDeProducto1\",respuesta.detalle.id);\r",
+											"\r",
+											"pm.test(\"Nuevo Id de producto\", () => {\r",
+											"    pm.expect(respuesta.detalle.id).not.eq(undefined)\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "appl",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"codigo\":\"{{$randomNoun}}\",\r\n   \"descripcion\":\"{{$randomProductName}}\",\r\n   \"categoria\":\"{{$randomProductMaterial}}\",\r\n   \"precioUnitario\":\"{{$randomPrice}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/producto",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"producto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nuevo Producto 2",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"pm.environment.set(\"codigoDeProducto2\",respuesta.detalle.id);\r",
+											"\r",
+											"pm.test(\"Nuevo Id de producto\", () => {\r",
+											"    pm.expect(respuesta.detalle.id).not.eq(undefined)\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "appl",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"codigo\":\"{{$randomNoun}}\",\r\n   \"descripcion\":\"{{$randomProductName}}\",\r\n   \"categoria\":\"{{$randomProductMaterial}}\",\r\n   \"precioUnitario\":\"{{$randomPrice}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/producto",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"producto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nuevo Producto 3",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"pm.environment.set(\"codigoDeProducto3\",respuesta.detalle.id);\r",
+											"\r",
+											"pm.test(\"Nuevo Id de producto\", () => {\r",
+											"    pm.expect(respuesta.detalle.id).not.eq(undefined)\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "appl",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"codigo\":\"{{$randomNoun}}\",\r\n   \"descripcion\":\"{{$randomProductName}}\",\r\n   \"categoria\":\"{{$randomProductMaterial}}\",\r\n   \"precioUnitario\":\"{{$randomPrice}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/producto",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"producto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nuevo Producto 4",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"pm.environment.set(\"codigoDeProducto4\",respuesta.detalle.id);\r",
+											"\r",
+											"pm.test(\"Nuevo Id de producto\", () => {\r",
+											"    pm.expect(respuesta.detalle.id).not.eq(undefined)\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "appl",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"codigo\":\"{{$randomNoun}}\",\r\n   \"descripcion\":\"{{$randomProductName}}\",\r\n   \"categoria\":\"{{$randomProductMaterial}}\",\r\n   \"precioUnitario\":\"{{$randomPrice}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/producto",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"producto"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Caso 2 - El administrador hace arreglos de los productos cargados",
+					"item": [
+						{
+							"name": "Singin Usuario Admin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"pm.environment.set(\"token\",respuesta.token);\r",
+											"\r",
+											"pm.test(\"Se obtuvo token\", () => {\r",
+											"    pm.expect(respuesta.token).not.eq(undefined)\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuarioNombre\" : \"{{usuarioAdmin}}\",\r\n    \"clave\" : \"{{claveAdmin}}\" \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/auth/signin",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar un  Producto por ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Elimino el Id de producto\", () => {\r",
+											"    pm.expect(respuesta.estatus).eq(\"Success\")\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/producto/{{codigoDeProducto4}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"producto",
+										"{{codigoDeProducto4}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Busca un Producto por ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Existe Id de producto\", () => {\r",
+											"    pm.expect(respuesta.id).not.eq(undefined)\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/producto/{{codigoDeProducto1}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"producto",
+										"{{codigoDeProducto1}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualiza Producto por ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Se actualizo\", () => {\r",
+											"    pm.expect(respuesta.estatus).not.eq(undefined)\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"codigo\":\"{{$randomNoun}}\",\r\n   \"descripcion\":\"{{$randomProductName}}\",\r\n   \"categoria\":\"{{$randomProductMaterial}}\",\r\n   \"precioUnitario\":\"{{$randomPrice}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/producto/{{codigoDeProducto1}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"producto",
+										"{{codigoDeProducto1}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Caso 3 - Se registra un nuevo usuario, se loguea y arma un carrito con 2 productos",
+					"item": [
+						{
+							"name": "Registro de Usuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Usuario registrado\", () => {\r",
+											"    pm.expect(pm.response.code).eq(201)\r",
+											"});  "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombreUsuario\" : \"{{usuarioNombre}}\",\r\n    \"nombre\": \"{{$randomFullName}}\",\r\n    \"clave\" : \"{{clave}}\",\r\n    \"telefono\" : \"{{$randomPhoneNumber}}\",\r\n    \"email\" : \"{{$randomEmail}}\",\r\n    \"roles\" : [ \r\n        \"usuario\"\r\n    ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/auth/usuario",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"auth",
+										"usuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Singin Usuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"pm.environment.set(\"token\",respuesta.token);\r",
+											"\r",
+											"pm.test(\"Se obtuvo token\", () => {\r",
+											"    pm.expect(respuesta.token).not.eq(undefined)\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuarioNombre\" : \"{{usuarioNombre}}\",\r\n    \"clave\" : \"{{clave}}\" \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/auth/signin",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Lista productos",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Usuario registrado\", () => {\r",
+											"    pm.expect(pm.response.code).eq(200)\r",
+											"});  "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "GET",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/producto/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"producto",
+										""
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nuevo Carrito",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"pm.environment.set(\"carritoId\",respuesta.detalle.id);\r",
+											"\r",
+											"pm.test(\"Nuevo carrito Id\", () => {\r",
+											"    pm.expect(respuesta.detalle.id).not.eq(undefined)\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"direccionEntrega\" : \"{{$randomStreetAddress}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/carrito",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"carrito"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nuevo Item 1 en Carrito",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Nuevo item al carrito carrito Id\", () => {\r",
+											"    pm.expect(respuesta.estatus).eq(\"Success\")\r",
+											"});                                                   \r",
+											" "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "appl",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"cantidad\" : \"1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/carrito/producto/{{codigoDeProducto1}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"carrito",
+										"producto",
+										"{{codigoDeProducto1}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nuevo Item 2 en Carrito",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Nuevo item al carrito carrito Id\", () => {\r",
+											"    pm.expect(respuesta.estatus).eq(\"Success\")\r",
+											"});                                                   \r",
+											" "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "appl",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"cantidad\" : \"1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/carrito/producto/{{codigoDeProducto2}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"carrito",
+										"producto",
+										"{{codigoDeProducto2}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nuevo Item 3 en Carrito",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"\r",
+											"\r",
+											"pm.test(\"Nuevo item al carrito carrito Id\", () => {\r",
+											"    pm.expect(respuesta.estatus).eq(\"Success\")\r",
+											"});                                                   \r",
+											" "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "appl",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"cantidad\" : \"2\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/carrito/producto/{{codigoDeProducto3}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"carrito",
+										"producto",
+										"{{codigoDeProducto3}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Caso 4 - El usuario elimina un producto y arma la orden de compra",
+					"item": [
+						{
+							"name": "Singin Usuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"pm.environment.set(\"token\",respuesta.token);\r",
+											"\r",
+											"pm.test(\"Se obtuvo token\", () => {\r",
+											"    pm.expect(respuesta.token).not.eq(undefined)\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuarioNombre\" : \"{{usuarioNombre}}\",\r\n    \"clave\" : \"{{clave}}\" \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/auth/signin",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Elimina 1 Item del producto 3  del Carrito",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Producto eliminado del carrito\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											"\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "appl",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"cantidad\" : \"1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/carrito/producto/{{codigoDeProducto3}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"carrito",
+										"producto",
+										"{{codigoDeProducto3}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nueva Orden según carrito",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"pm.environment.set(\"ordenId\",respuesta.detalle.id);\r",
+											"\r",
+											"pm.test(\"Orden creada\", () => {\r",
+											"    pm.expect(respuesta.detalle.id).not.eq(undefined)\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "appl",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/orden/carrito",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"orden",
+										"carrito"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Caso 5 - El usuario cierra la orden",
+					"item": [
+						{
+							"name": "Singin Usuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"pm.environment.set(\"token\",respuesta.token);\r",
+											"\r",
+											"pm.test(\"Se obtuvo token\", () => {\r",
+											"    pm.expect(respuesta.token).not.eq(undefined)\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuarioNombre\" : \"{{usuarioNombre}}\",\r\n    \"clave\" : \"{{clave}}\" \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/auth/signin",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Cierra la Orden",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta = pm.response.json();\r",
+											"pm.test(\"Orden cerrada\", function () {\r",
+											"    pm.response.to.have.status(200);\r",
+											"});\r",
+											""
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PATCH",
+								"header": [
+									{
+										"key": "appl",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/orden/{{ordenId}}/cerrar",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"orden",
+										"{{ordenId}}",
+										"cerrar"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Caso 6 - El usuario crea un carrito y agrega un producto y elimina el carrito",
+					"item": [
+						{
+							"name": "Singin Usuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"pm.environment.set(\"token\",respuesta.token);\r",
+											"\r",
+											"pm.test(\"Se obtuvo token\", () => {\r",
+											"    pm.expect(respuesta.token).not.eq(undefined)\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuarioNombre\" : \"{{usuarioNombre}}\",\r\n    \"clave\" : \"{{clave}}\" \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/auth/signin",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nuevo Carrito",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"pm.environment.set(\"carritoId\",respuesta.detalle.id);\r",
+											"\r",
+											"pm.test(\"Nuevo carrito Id\", () => {\r",
+											"    pm.expect(respuesta.detalle.id).not.eq(undefined)\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"direccionEntrega\" : \"{{$randomStreetAddress}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/carrito",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"carrito"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nuevo Item 1 en Carrito",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Nuevo item al carrito carrito Id\", () => {\r",
+											"    pm.expect(respuesta.estatus).eq(\"Success\")\r",
+											"});                                                   \r",
+											" "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "appl",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"cantidad\" : \"1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/carrito/producto/{{codigoDeProducto1}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"carrito",
+										"producto",
+										"{{codigoDeProducto1}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Elimina carrito",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"\r",
+											"pm.test(\"Carrito elimiando\", () => {\r",
+											"    pm.expect(respuesta.estatus).eq(\"Success\")\r",
+											"});                                                   \r",
+											" "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [
+									{
+										"key": "appl",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n  \"cantidad\" : \"1\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/carrito/",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"carrito",
+										""
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Caso 7 - Usuario no puede administrar productos",
+					"item": [
+						{
+							"name": "Singin Usuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"pm.environment.set(\"token\",respuesta.token);\r",
+											"\r",
+											"pm.test(\"Se obtuvo token\", () => {\r",
+											"    pm.expect(respuesta.token).not.eq(undefined)\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuarioNombre\" : \"{{usuarioNombre}}\",\r\n    \"clave\" : \"{{clave}}\" \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/auth/signin",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nuevo Producto 1",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Acceso denegado\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([401]);\r",
+											"});"
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [
+									{
+										"key": "appl",
+										"value": "",
+										"type": "text"
+									}
+								],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"codigo\":\"{{$randomNoun}}\",\r\n   \"descripcion\":\"{{$randomProductName}}\",\r\n   \"categoria\":\"{{$randomProductMaterial}}\",\r\n   \"precioUnitario\":\"{{$randomPrice}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/producto",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"producto"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Eliminar un  Producto por ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Acceso denegado\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([401]);\r",
+											"});\r",
+											" "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "DELETE",
+								"header": [],
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/producto/{{codigoDeProducto4}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"producto",
+										"{{codigoDeProducto4}}"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Actualiza Producto por ID",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Acceso denegado\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([401]);\r",
+											"});\r",
+											" "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PUT",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n   \"codigo\":\"{{$randomNoun}}\",\r\n   \"descripcion\":\"{{$randomProductName}}\",\r\n   \"categoria\":\"{{$randomProductMaterial}}\",\r\n   \"precioUnitario\":\"{{$randomPrice}}\"\r\n}",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/producto/{{codigoDeProducto1}}",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"producto",
+										"{{codigoDeProducto1}}"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Caso 8 - Usuario no puede administrar  usuarios",
+					"item": [
+						{
+							"name": "Singin Usuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"pm.environment.set(\"token\",respuesta.token);\r",
+											"\r",
+											"pm.test(\"Se obtuvo token\", () => {\r",
+											"    pm.expect(respuesta.token).not.eq(undefined)\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuarioNombre\" : \"{{usuarioNombre}}\",\r\n    \"clave\" : \"{{clave}}\" \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/auth/signin",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificar Usuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Acceso denegado\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([401]);\r",
+											"});\r",
+											" "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombreUsuario\" : \"{{usuarioAdmin}}\",\r\n    \"nombre\": \"{{$randomFullName}}\",\r\n    \"clave\" : \"{{claveAdmin}}\",\r\n    \"telefono\" : \"{{$randomPhoneNumber}}\",\r\n    \"email\" : \"{{$randomEmail}}\",\r\n    \"roles\" : [ \r\n        \"administrador\"\r\n    ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/usuario",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"usuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Nuevo Usuario Admin",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Acceso denegado\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([401]);\r",
+											"});\r",
+											"    "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombreUsuario\" : \"{{usuarioAdmin}}\",\r\n    \"nombre\": \"{{$randomFullName}}\",\r\n    \"clave\" : \"{{claveAdmin}}\",\r\n    \"telefono\" : \"{{$randomPhoneNumber}}\",\r\n    \"email\" : \"{{$randomEmail}}\",\r\n    \"roles\" : [ \r\n        \"administrador\"\r\n    ]\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/auth/usuario",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"auth",
+										"usuario"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Caso 9 - Usuario puede modificar  sus datos",
+					"item": [
+						{
+							"name": "Singin Usuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"pm.environment.set(\"token\",respuesta.token);\r",
+											"\r",
+											"pm.test(\"Se obtuvo token\", () => {\r",
+											"    pm.expect(respuesta.token).not.eq(undefined)\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuarioNombre\" : \"{{usuarioNombre}}\",\r\n    \"clave\" : \"{{clave}}\" \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/auth/signin",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificar Usuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Acceso denegado\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
+											"});\r",
+											" "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombreUsuario\" : \"{{usuarioNombre}}\",\r\n    \"nombre\": \"{{$randomFullName}}\",\r\n    \"telefono\" : \"{{$randomPhoneNumber}}\",\r\n    \"email\" : \"{{$randomEmail}}\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/usuario",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"usuario"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				},
+				{
+					"name": "Caso 10 - Usuario cambia la clave y se loguea con su nueva clave",
+					"item": [
+						{
+							"name": "Singin Usuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"pm.environment.set(\"token\",respuesta.token);\r",
+											"\r",
+											"pm.test(\"Se obtuvo token\", () => {\r",
+											"    pm.expect(respuesta.token).not.eq(undefined)\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuarioNombre\" : \"{{usuarioNombre}}\",\r\n    \"clave\" : \"{{clave}}\" \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/auth/signin",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Modificar Usuario",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"pm.test(\"Acceso denegado\", function () {\r",
+											"    pm.expect(pm.response.code).to.be.oneOf([200]);\r",
+											"});\r",
+											" "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "PATCH",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"nombreUsuario\" : \"{{usuarioNombre}}\",\r\n    \"clave\" : \"nuevaClave\"\r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/usuario",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"usuario"
+									]
+								}
+							},
+							"response": []
+						},
+						{
+							"name": "Singin Usuario nueva clave",
+							"event": [
+								{
+									"listen": "test",
+									"script": {
+										"exec": [
+											"const respuesta  = pm.response.json();\r",
+											"pm.environment.set(\"token\",respuesta.token);\r",
+											"\r",
+											"pm.test(\"Se obtuvo token\", () => {\r",
+											"    pm.expect(respuesta.token).not.eq(undefined)\r",
+											"});                                                   "
+										],
+										"type": "text/javascript"
+									}
+								}
+							],
+							"request": {
+								"method": "POST",
+								"header": [],
+								"body": {
+									"mode": "raw",
+									"raw": "{\r\n    \"usuarioNombre\" : \"{{usuarioNombre}}\",\r\n    \"clave\" : \"nuevaClave\" \r\n}\r\n",
+									"options": {
+										"raw": {
+											"language": "json"
+										}
+									}
+								},
+								"url": {
+									"raw": "{{host}}/{{apiVersion}}/auth/signin",
+									"host": [
+										"{{host}}"
+									],
+									"path": [
+										"{{apiVersion}}",
+										"auth",
+										"signin"
+									]
+								}
+							},
+							"response": []
+						}
+					]
+				}
+			],
+			"auth": {
+				"type": "bearer",
+				"bearer": [
+					{
+						"key": "token",
+						"value": "{{token}}",
+						"type": "string"
+					}
+				]
+			},
+			"event": [
+				{
+					"listen": "prerequest",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				},
+				{
+					"listen": "test",
+					"script": {
+						"type": "text/javascript",
+						"exec": [
+							""
+						]
+					}
+				}
+			]
+		}
+	],
+	"auth": {
+		"type": "bearer",
+		"bearer": [
+			{
+				"key": "token",
+				"value": "eyJhbGciOiJIUzUxMiJ9.eyJzdWIiOiJmcmFuY28iLCJpYXQiOjE2Njg3OTMxMjYsImV4cCI6MTY2ODc5MzIyNn0.L_NnYH0cK-nyqn0pcUxaOB0UdhOA1n7HG0R5nQYGPS0rHvD3RfTD3otGBcYvpmpLF164l45lZj-NqV64walg9A",
+				"type": "string"
+			}
+		]
+	},
+	"event": [
+		{
+			"listen": "prerequest",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		},
+		{
+			"listen": "test",
+			"script": {
+				"type": "text/javascript",
+				"exec": [
+					""
+				]
+			}
+		}
+	]
+}

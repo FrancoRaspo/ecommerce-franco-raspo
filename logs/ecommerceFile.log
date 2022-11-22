@@ -1,0 +1,814 @@
+[2022-11-19 10:38:20] http-nio-8081-exec-4 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-19 10:38:20] http-nio-8081-exec-4 DEBUG c.e.f.c.UsuarioController                               >> UsuarioRequest(nombre=Jaime Tromp, telefono=878-907-8284, nombreUsuario=admin|, clave=#$%&#$%&#$%63456, email=Alejandra_Lang@hotmail.com, roles=[administrador]) 
+[2022-11-19 10:38:25] http-nio-8081-exec-9 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-19 10:38:25] http-nio-8081-exec-9 DEBUG c.e.f.c.UsuarioController                               >> UsuarioRequest(nombre=Penny Schmidt, telefono=570-402-7198, nombreUsuario=francoraspo, clave=Pas$W0rd., email=Krystal_Koch95@gmail.com, roles=[usuario]) 
+[2022-11-19 10:38:27] http-nio-8081-exec-10 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-19 10:38:27] http-nio-8081-exec-10 DEBUG c.e.f.c.UsuarioController                               >> UsuarioRequest(nombre=Marty Ziemann, telefono=506-735-6114, nombreUsuario=francoraspo, clave=Pas$W0rd., email=Stuart_Daugherty5@yahoo.com, roles=[usuario]) 
+[2022-11-19 10:38:31] http-nio-8081-exec-8 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-19 10:38:31] http-nio-8081-exec-8 DEBUG c.e.f.c.UsuarioController                               >> UsuarioRequest(nombre=Francis Pagac, telefono=512-293-3067, nombreUsuario=admin|, clave=#$%&#$%&#$%63456, email=Pascale10@hotmail.com, roles=[administrador]) 
+[2022-11-19 10:40:40] http-nio-8081-exec-9 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-19 10:40:40] http-nio-8081-exec-9 DEBUG c.e.f.c.UsuarioController                               >> UsuarioRequest(nombre=Laurie Rowe, telefono=873-747-6940, nombreUsuario=francoraspo, clave=Pas$W0rd., email=Maxime1@yahoo.com, roles=[usuario]) 
+[2022-11-19 10:41:16] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-19 10:45:09] http-nio-8081-exec-7 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-19 10:45:09] http-nio-8081-exec-7 DEBUG c.e.f.c.UsuarioController                               >> UsuarioRequest(nombre=Lynn Stokes, telefono=524-802-8976, nombreUsuario=admin, clave=#$%&#$%&#$%63456, email=Emie_Mayer@yahoo.com, roles=[administrador]) 
+[2022-11-19 10:54:58] http-nio-8081-exec-1 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-19 10:54:58] http-nio-8081-exec-1 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=Intelligent, descripcion=Generic Fresh Bike, precioUnitario=784.85, categoria=Plastic) 
+[2022-11-19 10:55:22] http-nio-8081-exec-6 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-19 10:55:23] http-nio-8081-exec-6 DEBUG c.e.f.c.UsuarioController                               >> UsuarioRequest(nombre=Margie Russel, telefono=331-434-3388, nombreUsuario=francoraspo, clave=Pas$W0rd., email=Selmer24@yahoo.com, roles=[usuario]) 
+[2022-11-19 10:55:32] http-nio-8081-exec-8 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-19 10:55:32] http-nio-8081-exec-8 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=Awesome, descripcion=Fantastic Metal Bike, precioUnitario=380.87, categoria=Plastic) 
+[2022-11-19 11:09:51] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-19 11:09:51] http-nio-8081-exec-3 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=Unbranded, descripcion=Ergonomic Metal Tuna, precioUnitario=349.12, categoria=Rubber) 
+[2022-11-19 11:09:51] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> [USUARIO] 
+[2022-11-19 11:10:10] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-19 11:10:10] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=Gorgeous, descripcion=Rustic Soft Shoes, precioUnitario=758.5, categoria=Frozen) 
+[2022-11-19 11:10:10] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-19 11:11:37] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-19 11:11:37] http-nio-8081-exec-10 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=Fantastic, descripcion=Intelligent Fresh Car, precioUnitario=876.72, categoria=Fresh) 
+[2022-11-19 11:11:37] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> [USUARIO] 
+[2022-11-19 11:11:37] http-nio-8081-exec-10 ERROR c.e.f.c.ProductoController                              >> Access is denied 
+[2022-11-19 11:11:53] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-19 11:11:53] http-nio-8081-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=Incredible, descripcion=Generic Concrete Table, precioUnitario=149.65, categoria=Soft) 
+[2022-11-19 11:11:53] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-19 11:11:53] http-nio-8081-exec-2 ERROR c.e.f.c.ProductoController                              >> Access is denied 
+[2022-11-19 11:12:34] http-nio-8081-exec-1 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-19 11:12:34] http-nio-8081-exec-1 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=Fantastic, descripcion=Tasty Fresh Computer, precioUnitario=222.35, categoria=Concrete) 
+[2022-11-19 11:12:34] http-nio-8081-exec-1 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-19 11:12:34] http-nio-8081-exec-1 ERROR c.e.f.c.ProductoController                              >> Access is denied 
+[2022-11-19 11:15:35] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-19 11:15:35] http-nio-8081-exec-3 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=Refined, descripcion=Generic Metal Ball, precioUnitario=626.11, categoria=Fresh) 
+[2022-11-19 11:15:40] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-19 11:23:00] http-nio-8081-exec-3 ERROR c.e.f.c.ProductoController                              >> Access is denied 
+[2022-11-19 11:24:06] http-nio-8081-exec-8 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-19 11:24:06] http-nio-8081-exec-8 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=Practical, descripcion=Fantastic Steel Salad, precioUnitario=59.18, categoria=Rubber) 
+[2022-11-19 11:24:06] http-nio-8081-exec-8 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-19 11:24:06] http-nio-8081-exec-8 ERROR c.e.f.c.ProductoController                              >> Access is denied 
+[2022-11-19 11:52:31] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-19 11:52:31] http-nio-8081-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=Incredible, descripcion=Unbranded Frozen Towels, precioUnitario=949.25, categoria=Rubber) 
+[2022-11-19 11:52:31] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-19 11:52:57] http-nio-8081-exec-8 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-19 11:52:57] http-nio-8081-exec-8 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=Practical, descripcion=Small Fresh Shirt, precioUnitario=290.7, categoria=Wooden) 
+[2022-11-19 11:52:57] http-nio-8081-exec-8 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-19 12:07:11] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-19 12:07:11] http-nio-8081-exec-1 DEBUG c.e.f.c.UsuarioController                               >> UsuarioRequest(nombre=Lori Shields, telefono=276-932-9065, nombreUsuario=admin, clave=#$%&#$%&#$%63456, email=Wellington60@gmail.com, roles=[administrador]) 
+[2022-11-19 12:07:36] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-19 12:07:36] http-nio-8081-exec-3 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=Refined, descripcion=Gorgeous Steel Hat, precioUnitario=917.74, categoria=Granite) 
+[2022-11-19 12:07:36] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-19 12:07:37] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-19 12:07:37] http-nio-8081-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=Rustic, descripcion=Tasty Fresh Mouse, precioUnitario=631.56, categoria=Metal) 
+[2022-11-19 12:07:37] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-19 12:07:37] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-19 12:07:37] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=Ergonomic, descripcion=Intelligent Cotton Pizza, precioUnitario=902.34, categoria=Steel) 
+[2022-11-19 12:07:37] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-19 12:08:14] http-nio-8081-exec-7 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-19 12:08:14] http-nio-8081-exec-7 DEBUG c.e.f.c.UsuarioController                               >> UsuarioRequest(nombre=Miss Lorena Abshire, telefono=983-641-1276, nombreUsuario=francoraspo, clave=Pas$W0rd., email=Burley85@gmail.com, roles=[usuario]) 
+[2022-11-19 12:10:10] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-19 12:10:10] http-nio-8081-exec-2 DEBUG c.e.f.c.UsuarioController                               >> UsuarioRequest(nombre=Jesus Cruickshank, telefono=889-388-9534, nombreUsuario=francoraspo, clave=Pas$W0rd., email=Connie87@gmail.com, roles=[usuario]) 
+[2022-11-19 12:11:15] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-19 12:11:15] http-nio-8081-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=Intelligent, descripcion=Handmade Fresh Bike, precioUnitario=376.56, categoria=Fresh) 
+[2022-11-19 12:11:15] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-19 12:11:15] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-19 12:11:15] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=Licensed, descripcion=Intelligent Metal Cheese, precioUnitario=501.29, categoria=Wooden) 
+[2022-11-19 12:11:15] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-19 12:11:15] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-19 12:11:15] http-nio-8081-exec-7 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=Licensed, descripcion=Gorgeous Metal Ball, precioUnitario=64.62, categoria=Granite) 
+[2022-11-19 12:11:15] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-19 12:11:36] http-nio-8081-exec-8 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-19 12:11:36] http-nio-8081-exec-8 DEBUG c.e.f.c.UsuarioController                               >> UsuarioRequest(nombre=Darrell Wilderman, telefono=427-694-9640, nombreUsuario=francoraspo, clave=Pas$W0rd., email=Freddy77@hotmail.com, roles=[usuario]) 
+[2022-11-20 09:53:11] http-nio-8081-exec-3 INFO  c.e.f.c.OrdenController                                 >> POST /api/orden/carrito 
+[2022-11-20 10:06:42] http-nio-8081-exec-8 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-20 10:16:23] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-20 10:18:35] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 10:18:35] http-nio-8081-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=alarm, descripcion=Sleek Plastic Sausages, precioUnitario=203.37, categoria=Soft) 
+[2022-11-20 10:18:35] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 10:18:41] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 10:18:41] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=firewall, descripcion=Ergonomic Granite Table, precioUnitario=156.39, categoria=Frozen) 
+[2022-11-20 10:18:41] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 10:18:43] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 10:18:43] http-nio-8081-exec-7 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=capacitor, descripcion=Gorgeous Soft Fish, precioUnitario=957.41, categoria=Wooden) 
+[2022-11-20 10:18:43] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 10:50:07] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 10:50:07] http-nio-8081-exec-3 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=protocol, descripcion=Awesome Wooden Cheese, precioUnitario=592.87, categoria=Plastic) 
+[2022-11-20 10:50:07] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 10:50:08] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 10:50:08] http-nio-8081-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=driver, descripcion=Intelligent Wooden Bike, precioUnitario=697.71, categoria=Fresh) 
+[2022-11-20 10:50:08] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 10:50:08] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 10:50:08] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=pixel, descripcion=Licensed Plastic Table, precioUnitario=774.69, categoria=Steel) 
+[2022-11-20 10:50:08] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 10:50:08] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 10:50:08] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=driver, descripcion=Handmade Frozen Shirt, precioUnitario=371.29, categoria=Concrete) 
+[2022-11-20 10:50:08] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 10:50:31] http-nio-8081-exec-8 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-20 10:50:31] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-20 10:54:22] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 10:54:22] http-nio-8081-exec-3 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=monitor, descripcion=Ergonomic Frozen Chips, precioUnitario=169.27, categoria=Plastic) 
+[2022-11-20 10:54:22] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 10:54:23] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 10:54:23] http-nio-8081-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=microchip, descripcion=Sleek Fresh Sausages, precioUnitario=173.54, categoria=Granite) 
+[2022-11-20 10:54:23] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 10:54:23] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 10:54:23] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=interface, descripcion=Licensed Soft Pants, precioUnitario=332.34, categoria=Wooden) 
+[2022-11-20 10:54:23] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 10:54:23] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 10:54:23] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=driver, descripcion=Gorgeous Rubber Table, precioUnitario=196.74, categoria=Cotton) 
+[2022-11-20 10:54:23] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 10:55:34] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-20 10:55:34] http-nio-8081-exec-1 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-20 10:58:10] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 10:58:10] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=hard drive, descripcion=Small Metal Mouse, precioUnitario=619.41, categoria=Metal) 
+[2022-11-20 10:58:10] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 10:58:10] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 10:58:10] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=array, descripcion=Fantastic Cotton Keyboard, precioUnitario=185.42, categoria=Cotton) 
+[2022-11-20 10:58:10] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 10:58:10] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 10:58:10] http-nio-8081-exec-7 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=card, descripcion=Unbranded Soft Table, precioUnitario=139.81, categoria=Plastic) 
+[2022-11-20 10:58:10] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 10:58:51] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 10:58:51] http-nio-8081-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=circuit, descripcion=Unbranded Frozen Computer, precioUnitario=319.53, categoria=Metal) 
+[2022-11-20 10:58:51] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 10:58:51] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 10:58:51] http-nio-8081-exec-10 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=circuit, descripcion=Awesome Concrete Tuna, precioUnitario=83.02, categoria=Concrete) 
+[2022-11-20 10:58:51] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 10:58:51] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 10:58:51] http-nio-8081-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=driver, descripcion=Incredible Cotton Bacon, precioUnitario=211.6, categoria=Frozen) 
+[2022-11-20 10:58:51] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 10:58:51] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 10:58:51] http-nio-8081-exec-3 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=pixel, descripcion=Rustic Frozen Chicken, precioUnitario=582.67, categoria=Wooden) 
+[2022-11-20 10:58:51] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 10:59:08] http-nio-8081-exec-1 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-20 10:59:08] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-20 10:59:08] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-20 10:59:08] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=microchip, descripcion=Practical Cotton Pants, precioUnitario=926.98, categoria=Rubber) 
+[2022-11-20 10:59:21] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-20 10:59:21] http-nio-8081-exec-7 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=firewall, descripcion=Licensed Fresh Soap, precioUnitario=371.23, categoria=Granite) 
+[2022-11-20 10:59:56] http-nio-8081-exec-8 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-20 10:59:56] http-nio-8081-exec-8 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=driver, descripcion=Ergonomic Steel Ball, precioUnitario=786.94, categoria=Rubber) 
+[2022-11-20 11:00:17] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-20 11:00:17] http-nio-8081-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=bandwidth, descripcion=Practical Frozen Chips, precioUnitario=600.3, categoria=Frozen) 
+[2022-11-20 11:00:37] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-20 11:00:37] http-nio-8081-exec-10 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=matrix, descripcion=Unbranded Concrete Hat, precioUnitario=588.15, categoria=Soft) 
+[2022-11-20 11:01:21] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 11:01:21] http-nio-8081-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=driver, descripcion=Gorgeous Fresh Chicken, precioUnitario=379.83, categoria=Wooden) 
+[2022-11-20 11:01:21] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 11:01:55] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 11:01:56] http-nio-8081-exec-1 DEBUG c.e.f.c.UsuarioController                               >> UsuarioRequest(nombre=Chad Altenwerth, telefono=616-530-0957, nombreUsuario=francoraspo, clave=Pas$W0rd., email=Elise54@yahoo.com, roles=[usuario]) 
+[2022-11-20 11:01:56] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-20 11:03:46] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 11:03:46] http-nio-8081-exec-1 DEBUG c.e.f.c.UsuarioController                               >> UsuarioRequest(nombre=Elbert Becker, telefono=424-405-4038, nombreUsuario=francoraspo, clave=Pas$W0rd., email=Pascale.Bradtke50@gmail.com, roles=[usuario]) 
+[2022-11-20 11:04:45] http-nio-8081-exec-6 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 11:04:45] http-nio-8081-exec-6 DEBUG c.e.f.c.UsuarioController                               >> UsuarioRequest(nombre=Kerry Welch, telefono=596-620-6581, nombreUsuario=francoraspo, clave=Pas$W0rd., email=Camden.Gutmann51@yahoo.com, roles=[usuario]) 
+[2022-11-20 12:49:13] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 12:49:19] http-nio-8081-exec-8 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 12:49:34] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 12:49:34] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=hard drive, descripcion=Practical Steel Car, precioUnitario=701.71, categoria=Frozen) 
+[2022-11-20 12:49:34] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 12:49:34] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 12:49:34] http-nio-8081-exec-3 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=port, descripcion=Intelligent Wooden Pants, precioUnitario=250.51, categoria=Wooden) 
+[2022-11-20 12:49:34] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 12:49:34] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 12:49:34] http-nio-8081-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=transmitter, descripcion=Generic Steel Ball, precioUnitario=843.66, categoria=Soft) 
+[2022-11-20 12:49:34] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 12:51:00] http-nio-8081-exec-8 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 12:51:00] http-nio-8081-exec-8 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=matrix, descripcion=Incredible Frozen Chips, precioUnitario=662.84, categoria=Soft) 
+[2022-11-20 12:51:00] http-nio-8081-exec-8 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 12:51:00] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 12:51:00] http-nio-8081-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=microchip, descripcion=Generic Cotton Shoes, precioUnitario=569.93, categoria=Rubber) 
+[2022-11-20 12:51:00] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 12:51:00] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 12:51:00] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=protocol, descripcion=Practical Fresh Sausages, precioUnitario=31.26, categoria=Metal) 
+[2022-11-20 12:51:00] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 12:51:00] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 12:51:00] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=program, descripcion=Generic Plastic Shirt, precioUnitario=441.35, categoria=Cotton) 
+[2022-11-20 12:51:00] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 12:51:11] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-20 12:51:11] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-20 12:51:11] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-20 12:51:11] http-nio-8081-exec-10 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=panel, descripcion=Licensed Concrete Chicken, precioUnitario=786.65, categoria=Cotton) 
+[2022-11-20 12:51:19] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 12:51:19] http-nio-8081-exec-1 ERROR c.e.f.c.UsuarioController                               >> Ya existe un usuario con ese nombre 
+[2022-11-20 12:51:20] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-20 13:21:21] http-nio-8081-exec-6 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:21:40] http-nio-8081-exec-7 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:21:47] http-nio-8081-exec-8 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:21:47] http-nio-8081-exec-8 ERROR c.e.f.c.UsuarioController                               >> Ya existe un usuario con ese nombre 
+[2022-11-20 13:22:44] http-nio-8081-exec-10 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:23:35] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:24:03] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:24:03] http-nio-8081-exec-1 ERROR c.e.f.c.UsuarioController                               >> Ya existe un usuario con ese nombre 
+[2022-11-20 13:24:10] http-nio-8081-exec-10 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:24:39] http-nio-8081-exec-5 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:24:46] http-nio-8081-exec-5 ERROR c.e.f.c.UsuarioController                               >> Ya existe un usuario con ese nombre 
+[2022-11-20 13:25:04] http-nio-8081-exec-7 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:25:55] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:26:00] http-nio-8081-exec-2 ERROR c.e.f.c.UsuarioController                               >> Ya existe un usuario con ese nombre 
+[2022-11-20 13:26:23] http-nio-8081-exec-4 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:27:11] http-nio-8081-exec-7 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:28:00] http-nio-8081-exec-7 ERROR c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-20 13:28:34] http-nio-8081-exec-8 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:29:05] http-nio-8081-exec-3 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:29:33] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:29:33] http-nio-8081-exec-1 ERROR c.e.f.c.UsuarioController                               >> Ya existe un usuario con ese nombre 
+[2022-11-20 13:29:39] http-nio-8081-exec-7 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:29:39] http-nio-8081-exec-7 ERROR c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-20 13:37:18] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:42:04] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:42:04] http-nio-8081-exec-1 ERROR c.e.f.c.UsuarioController                               >> Ya existe un usuario con ese nombre 
+[2022-11-20 13:42:24] http-nio-8081-exec-4 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:42:24] http-nio-8081-exec-4 ERROR c.e.f.c.UsuarioController                               >> Ya existe un usuario con ese nombre 
+[2022-11-20 13:42:59] http-nio-8081-exec-6 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:43:06] http-nio-8081-exec-7 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:43:06] http-nio-8081-exec-7 ERROR c.e.f.c.UsuarioController                               >> Ya existe un usuario con ese nombre 
+[2022-11-20 13:43:18] http-nio-8081-exec-9 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:44:47] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:44:53] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 13:44:53] http-nio-8081-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=firewall, descripcion=Intelligent Soft Cheese, precioUnitario=181.95, categoria=Concrete) 
+[2022-11-20 13:44:53] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 13:44:53] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 13:44:53] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=monitor, descripcion=Unbranded Soft Chicken, precioUnitario=514.33, categoria=Frozen) 
+[2022-11-20 13:44:53] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 13:44:53] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 13:44:53] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=circuit, descripcion=Intelligent Frozen Tuna, precioUnitario=538.21, categoria=Soft) 
+[2022-11-20 13:44:53] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 13:44:53] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-20 13:44:53] http-nio-8081-exec-7 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=firewall, descripcion=Gorgeous Wooden Pizza, precioUnitario=33.22, categoria=Rubber) 
+[2022-11-20 13:44:53] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> [ADMINISTRADOR] 
+[2022-11-20 13:45:01] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-20 13:45:01] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-20 13:45:01] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-20 13:45:01] http-nio-8081-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=hard drive, descripcion=Sleek Steel Pizza, precioUnitario=598.22, categoria=Frozen) 
+[2022-11-20 13:45:28] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-20 13:45:29] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-20 13:48:52] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-21 12:01:11] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 12:04:29] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 12:04:29] http-nio-8081-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=capacitor, descripcion=Rustic Frozen Mouse, precioUnitario=134.39, categoria=Granite) 
+[2022-11-21 12:04:29] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 12:04:29] http-nio-8081-exec-3 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=driver, descripcion=Practical Cotton Sausages, precioUnitario=408.91, categoria=Rubber) 
+[2022-11-21 12:04:29] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 12:04:29] http-nio-8081-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=card, descripcion=Sleek Granite Table, precioUnitario=288.39, categoria=Rubber) 
+[2022-11-21 12:04:29] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 12:04:29] http-nio-8081-exec-7 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=interface, descripcion=Incredible Steel Table, precioUnitario=216.02, categoria=Wooden) 
+[2022-11-21 12:04:40] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 12:04:40] http-nio-8081-exec-10 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=circuit, descripcion=Licensed Rubber Bike, precioUnitario=869.05, categoria=Soft) 
+[2022-11-21 12:06:06] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 12:06:06] http-nio-8081-exec-7 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=driver, descripcion=Unbranded Steel Hat, precioUnitario=478.28, categoria=Frozen) 
+[2022-11-21 12:14:15] http-nio-8081-exec-1 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 12:14:15] http-nio-8081-exec-1 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=alarm, descripcion=Incredible Fresh Fish, precioUnitario=689.03, categoria=Cotton) 
+[2022-11-21 12:15:03] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 12:15:03] http-nio-8081-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=protocol, descripcion=Generic Plastic Computer, precioUnitario=684.41, categoria=Frozen) 
+[2022-11-21 12:15:03] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 12:15:03] http-nio-8081-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=capacitor, descripcion=Handmade Frozen Hat, precioUnitario=224.43, categoria=Metal) 
+[2022-11-21 12:15:03] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 12:15:03] http-nio-8081-exec-7 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=application, descripcion=Tasty Granite Shirt, precioUnitario=622.38, categoria=Steel) 
+[2022-11-21 12:15:03] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 12:15:03] http-nio-8081-exec-10 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=matrix, descripcion=Rustic Concrete Cheese, precioUnitario=779.64, categoria=Rubber) 
+[2022-11-21 12:15:17] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 12:15:17] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-21 12:15:18] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 12:15:18] http-nio-8081-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=application, descripcion=Gorgeous Granite Cheese, precioUnitario=811.16, categoria=Metal) 
+[2022-11-21 12:16:22] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 12:16:22] http-nio-8081-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=system, descripcion=Generic Soft Hat, precioUnitario=18.25, categoria=Granite) 
+[2022-11-21 12:16:23] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 12:16:23] http-nio-8081-exec-7 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=capacitor, descripcion=Awesome Fresh Salad, precioUnitario=986.51, categoria=Soft) 
+[2022-11-21 12:16:23] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 12:16:23] http-nio-8081-exec-10 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=protocol, descripcion=Gorgeous Granite Table, precioUnitario=817.06, categoria=Concrete) 
+[2022-11-21 12:16:23] http-nio-8081-exec-8 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 12:16:23] http-nio-8081-exec-8 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=pixel, descripcion=Gorgeous Frozen Chair, precioUnitario=150.24, categoria=Granite) 
+[2022-11-21 12:16:27] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 12:16:27] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-21 12:16:27] http-nio-8081-exec-1 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 12:16:27] http-nio-8081-exec-1 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=microchip, descripcion=Handcrafted Rubber Gloves, precioUnitario=786.35, categoria=Rubber) 
+[2022-11-21 12:16:40] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 12:16:40] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> Entidad no encontrada /api/producto/637b96473d6cd971b4ef13d3 
+[2022-11-21 12:16:46] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 12:16:46] http-nio-8081-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=system, descripcion=Handcrafted Frozen Shoes, precioUnitario=854.37, categoria=Soft) 
+[2022-11-21 12:16:50] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 12:17:13] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 12:17:13] http-nio-8081-exec-7 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=firewall, descripcion=Gorgeous Plastic Salad, precioUnitario=921.54, categoria=Plastic) 
+[2022-11-21 12:17:20] http-nio-8081-exec-8 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 12:17:20] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-21 12:17:20] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 12:17:20] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=microchip, descripcion=Tasty Soft Sausages, precioUnitario=618.47, categoria=Soft) 
+[2022-11-21 12:17:59] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 12:17:59] http-nio-8081-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=circuit, descripcion=Handmade Metal Chips, precioUnitario=972.84, categoria=Steel) 
+[2022-11-21 12:18:03] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 12:18:03] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-21 12:18:03] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 12:18:03] http-nio-8081-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=monitor, descripcion=Sleek Concrete Chair, precioUnitario=290.46, categoria=Frozen) 
+[2022-11-21 12:18:14] http-nio-8081-exec-7 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 12:18:14] http-nio-8081-exec-8 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-21 12:18:14] http-nio-8081-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 12:18:15] http-nio-8081-exec-5 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 12:18:15] http-nio-8081-exec-4 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 12:18:15] http-nio-8081-exec-1 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 12:19:02] http-nio-8081-exec-3 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 12:19:40] http-nio-8081-exec-2 INFO  c.e.f.c.CarritoController                               >> DELETE /api/carrito 
+[2022-11-21 12:20:06] http-nio-8081-exec-8 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 12:21:03] http-nio-8081-exec-6 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 12:21:03] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-21 12:21:03] http-nio-8081-exec-1 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 12:21:03] http-nio-8081-exec-3 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 12:21:04] http-nio-8081-exec-9 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 12:21:04] http-nio-8081-exec-2 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 12:21:14] http-nio-8081-exec-10 INFO  c.e.f.c.CarritoController                               >> DELETE /carrito/producto/{productoId} 
+[2022-11-21 12:21:15] http-nio-8081-exec-8 INFO  c.e.f.c.OrdenController                                 >> POST /api/orden/carrito 
+[2022-11-21 12:22:06] http-nio-8081-exec-6 INFO  c.e.f.c.CarritoController                               >> DELETE /carrito/producto/{productoId} 
+[2022-11-21 12:22:27] http-nio-8081-exec-4 INFO  c.e.f.c.OrdenController                                 >> POST /api/orden/carrito 
+[2022-11-21 12:22:27] http-nio-8081-exec-4 ERROR c.e.f.c.OrdenController                                 >> No hay carrito para el usuario 
+[2022-11-21 12:22:42] http-nio-8081-exec-9 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 12:22:47] http-nio-8081-exec-2 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 12:22:49] http-nio-8081-exec-7 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 12:22:53] http-nio-8081-exec-10 INFO  c.e.f.c.OrdenController                                 >> POST /api/orden/carrito 
+[2022-11-21 12:23:21] http-nio-8081-exec-8 INFO  c.e.f.c.OrdenController                                 >> POST /api/orden/carrito 
+[2022-11-21 12:23:21] http-nio-8081-exec-8 ERROR c.e.f.c.OrdenController                                 >> No hay carrito para el usuario 
+[2022-11-21 15:00:49] http-nio-8081-exec-3 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 15:00:57] http-nio-8081-exec-4 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 15:01:11] http-nio-8081-exec-5 INFO  c.e.f.c.CarritoController                               >> DELETE /api/carrito 
+[2022-11-21 15:02:30] http-nio-8081-exec-9 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 15:02:30] http-nio-8081-exec-10 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 15:02:31] http-nio-8081-exec-1 INFO  c.e.f.c.CarritoController                               >> DELETE /api/carrito 
+[2022-11-21 15:02:43] http-nio-8081-exec-3 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 15:03:24] http-nio-8081-exec-4 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 15:03:28] http-nio-8081-exec-5 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 15:04:03] http-nio-8081-exec-1 INFO  c.e.f.c.CarritoController                               >> DELETE /api/carrito 
+[2022-11-21 15:04:07] http-nio-8081-exec-4 INFO  c.e.f.c.CarritoController                               >> DELETE /api/carrito 
+[2022-11-21 15:17:13] http-nio-8081-exec-10 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 15:17:13] http-nio-8081-exec-10 INFO  c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-21 15:18:01] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 15:18:01] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-21 15:18:33] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 15:18:33] http-nio-8081-exec-1 ERROR c.e.f.c.UsuarioController                               >> Ya existe un usuario con ese nombre 
+[2022-11-21 15:19:47] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 15:19:47] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-21 15:19:51] http-nio-8081-exec-4 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 15:19:51] http-nio-8081-exec-4 ERROR c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-21 15:21:28] http-nio-8081-exec-5 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 15:23:30] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 15:33:01] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 15:33:18] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 15:33:27] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 15:33:27] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=capacitor, descripcion=Intelligent Soft Soap, precioUnitario=475.22, categoria=Soft) 
+[2022-11-21 15:35:44] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 15:35:44] http-nio-8081-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=feed, descripcion=Awesome Concrete Salad, precioUnitario=260.28, categoria=Frozen) 
+[2022-11-21 15:35:44] http-nio-8081-exec-4 ERROR c.e.f.c.ProductoController                              >> No puede crear productos 
+[2022-11-21 15:36:25] http-nio-8081-exec-1 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 15:36:25] http-nio-8081-exec-1 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=monitor, descripcion=Handcrafted Fresh Fish, precioUnitario=410.55, categoria=Metal) 
+[2022-11-21 15:36:25] http-nio-8081-exec-1 ERROR c.e.f.c.ProductoController                              >> No puede crear productos 
+[2022-11-21 15:36:36] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 15:36:36] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=hard drive, descripcion=Small Cotton Pants, precioUnitario=509.32, categoria=Metal) 
+[2022-11-21 15:36:36] http-nio-8081-exec-5 ERROR c.e.f.c.ProductoController                              >> No puede crear productos 
+[2022-11-21 15:37:25] http-nio-8081-exec-1 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 15:37:25] http-nio-8081-exec-1 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=microchip, descripcion=Handmade Concrete Gloves, precioUnitario=798.83, categoria=Concrete) 
+[2022-11-21 15:37:25] http-nio-8081-exec-1 ERROR c.e.f.c.ProductoController                              >> No puede crear productos 
+[2022-11-21 15:37:34] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 15:37:34] http-nio-8081-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=system, descripcion=Refined Frozen Soap, precioUnitario=176.1, categoria=Plastic) 
+[2022-11-21 15:37:34] http-nio-8081-exec-4 ERROR c.e.f.c.ProductoController                              >> No puede crear productos 
+[2022-11-21 15:37:38] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 15:38:12] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 15:38:12] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=microchip, descripcion=Unbranded Plastic Hat, precioUnitario=334.17, categoria=Cotton) 
+[2022-11-21 15:39:23] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 15:39:23] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=microchip, descripcion=Small Plastic Bike, precioUnitario=2.15, categoria=Metal) 
+[2022-11-21 16:04:58] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 16:04:58] http-nio-8081-exec-1 ERROR c.e.f.c.UsuarioController                               >> Ya existe un usuario con ese nombre 
+[2022-11-21 16:04:58] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-21 16:04:58] http-nio-8081-exec-4 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 16:04:58] http-nio-8081-exec-7 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 16:04:58] http-nio-8081-exec-8 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 16:04:59] http-nio-8081-exec-9 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 16:05:08] http-nio-8081-exec-2 INFO  c.e.f.c.CarritoController                               >> DELETE /carrito/producto/{productoId} 
+[2022-11-21 16:05:08] http-nio-8081-exec-1 INFO  c.e.f.c.OrdenController                                 >> POST /api/orden/carrito 
+[2022-11-21 16:08:59] http-nio-8081-exec-8 INFO  c.e.f.c.OrdenController                                 >> PATCH orden/{id}/cerrar 
+[2022-11-21 16:10:05] http-nio-8081-exec-1 INFO  c.e.f.c.OrdenController                                 >> PATCH orden/{id}/cerrar 
+[2022-11-21 16:10:05] http-nio-8081-exec-1 DEBUG c.e.f.c.OrdenController                                 >> La orden no esta abierta. 
+[2022-11-21 16:17:49] http-nio-8081-exec-5 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 16:17:49] http-nio-8081-exec-5 ERROR c.e.f.c.UsuarioController                               >> Ya existe un usuario con ese nombre 
+[2022-11-21 16:17:49] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-21 16:17:49] http-nio-8081-exec-4 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 16:17:50] http-nio-8081-exec-3 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 16:17:50] http-nio-8081-exec-8 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 16:17:50] http-nio-8081-exec-9 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 16:17:59] http-nio-8081-exec-1 INFO  c.e.f.c.CarritoController                               >> DELETE /carrito/producto/{productoId} 
+[2022-11-21 16:17:59] http-nio-8081-exec-5 INFO  c.e.f.c.OrdenController                                 >> POST /api/orden/carrito 
+[2022-11-21 16:18:05] http-nio-8081-exec-6 INFO  c.e.f.c.OrdenController                                 >> PATCH orden/{id}/cerrar 
+[2022-11-21 16:35:05] http-nio-8081-exec-4 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 16:35:05] http-nio-8081-exec-4 INFO  c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-21 16:35:14] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 16:35:14] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-21 16:35:50] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 16:37:29] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-21 16:38:06] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 16:38:58] http-nio-8081-exec-2 ERROR c.e.f.c.UsuarioController                               >> null 
+[2022-11-21 16:42:18] http-nio-8081-exec-4 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 16:45:35] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 16:49:54] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 16:49:55] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 16:49:55] http-nio-8081-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=transmitter, descripcion=Intelligent Concrete Computer, precioUnitario=170.87, categoria=Metal) 
+[2022-11-21 16:49:55] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 16:49:55] http-nio-8081-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=transmitter, descripcion=Rustic Metal Pants, precioUnitario=912.48, categoria=Concrete) 
+[2022-11-21 16:49:55] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 16:49:55] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=capacitor, descripcion=Rustic Wooden Chair, precioUnitario=592.08, categoria=Metal) 
+[2022-11-21 16:49:55] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 16:49:55] http-nio-8081-exec-7 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=sensor, descripcion=Tasty Frozen Table, precioUnitario=401.19, categoria=Wooden) 
+[2022-11-21 16:49:56] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 16:49:56] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-21 16:49:56] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 16:49:56] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=panel, descripcion=Ergonomic Rubber Hat, precioUnitario=774.37, categoria=Granite) 
+[2022-11-21 16:49:56] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 16:49:56] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-21 16:49:57] http-nio-8081-exec-2 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 16:49:57] http-nio-8081-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 16:49:57] http-nio-8081-exec-7 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 16:49:57] http-nio-8081-exec-8 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 16:49:57] http-nio-8081-exec-10 INFO  c.e.f.c.CarritoController                               >> DELETE /carrito/producto/{productoId} 
+[2022-11-21 16:49:57] http-nio-8081-exec-5 INFO  c.e.f.c.OrdenController                                 >> POST /api/orden/carrito 
+[2022-11-21 16:49:58] http-nio-8081-exec-3 INFO  c.e.f.c.OrdenController                                 >> PATCH orden/{id}/cerrar 
+[2022-11-21 16:49:58] http-nio-8081-exec-2 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 16:49:58] http-nio-8081-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 16:49:58] http-nio-8081-exec-7 INFO  c.e.f.c.CarritoController                               >> DELETE /api/carrito 
+[2022-11-21 16:49:58] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 16:49:58] http-nio-8081-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=system, descripcion=Gorgeous Frozen Tuna, precioUnitario=955.99, categoria=Wooden) 
+[2022-11-21 16:49:58] http-nio-8081-exec-4 ERROR c.e.f.c.ProductoController                              >> No puede crear productos 
+[2022-11-21 16:49:58] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 16:49:58] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 16:49:58] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=hard drive, descripcion=Small Rubber Shoes, precioUnitario=84.2, categoria=Granite) 
+[2022-11-21 16:49:59] http-nio-8081-exec-3 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 16:49:59] http-nio-8081-exec-3 INFO  c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-21 16:49:59] http-nio-8081-exec-9 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 16:49:59] http-nio-8081-exec-6 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 16:49:59] http-nio-8081-exec-8 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 16:53:12] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 16:53:12] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 16:53:12] http-nio-8081-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=array, descripcion=Gorgeous Soft Chicken, precioUnitario=566.7, categoria=Frozen) 
+[2022-11-21 16:53:12] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 16:53:12] http-nio-8081-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=feed, descripcion=Tasty Metal Sausages, precioUnitario=756.02, categoria=Steel) 
+[2022-11-21 16:53:12] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 16:53:12] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=transmitter, descripcion=Tasty Metal Hat, precioUnitario=855.68, categoria=Steel) 
+[2022-11-21 16:53:13] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 16:53:13] http-nio-8081-exec-3 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=monitor, descripcion=Refined Steel Bike, precioUnitario=370.08, categoria=Plastic) 
+[2022-11-21 16:53:13] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 16:53:13] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-21 16:53:13] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 16:53:13] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=driver, descripcion=Unbranded Concrete Soap, precioUnitario=92.74, categoria=Steel) 
+[2022-11-21 16:53:13] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 16:53:13] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-21 16:53:14] http-nio-8081-exec-2 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 16:53:14] http-nio-8081-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 16:53:14] http-nio-8081-exec-3 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 16:53:14] http-nio-8081-exec-8 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 16:53:14] http-nio-8081-exec-10 INFO  c.e.f.c.CarritoController                               >> DELETE /carrito/producto/{productoId} 
+[2022-11-21 16:53:14] http-nio-8081-exec-5 INFO  c.e.f.c.OrdenController                                 >> POST /api/orden/carrito 
+[2022-11-21 16:53:15] http-nio-8081-exec-7 INFO  c.e.f.c.OrdenController                                 >> PATCH orden/{id}/cerrar 
+[2022-11-21 16:53:15] http-nio-8081-exec-2 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 16:53:15] http-nio-8081-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 16:53:15] http-nio-8081-exec-3 INFO  c.e.f.c.CarritoController                               >> DELETE /api/carrito 
+[2022-11-21 16:53:15] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 16:53:15] http-nio-8081-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=feed, descripcion=Sleek Steel Pants, precioUnitario=362.84, categoria=Plastic) 
+[2022-11-21 16:53:15] http-nio-8081-exec-9 ERROR c.e.f.c.ProductoController                              >> No puede crear productos 
+[2022-11-21 16:53:15] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 16:53:15] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 16:53:15] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=system, descripcion=Practical Concrete Soap, precioUnitario=396.67, categoria=Concrete) 
+[2022-11-21 16:53:16] http-nio-8081-exec-7 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 16:53:16] http-nio-8081-exec-7 INFO  c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-21 16:53:16] http-nio-8081-exec-4 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 16:53:16] http-nio-8081-exec-6 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 16:53:16] http-nio-8081-exec-8 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:21:34] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:21:34] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:21:34] http-nio-8081-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=transmitter, descripcion=Sleek Fresh Chicken, precioUnitario=651.9, categoria=Metal) 
+[2022-11-21 19:21:35] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:21:35] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=interface, descripcion=Fantastic Steel Bike, precioUnitario=305.8, categoria=Metal) 
+[2022-11-21 19:21:35] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:21:35] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=microchip, descripcion=Small Metal Shoes, precioUnitario=27.83, categoria=Wooden) 
+[2022-11-21 19:21:35] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:21:35] http-nio-8081-exec-7 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=card, descripcion=Handcrafted Concrete Pants, precioUnitario=546.27, categoria=Fresh) 
+[2022-11-21 19:21:35] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 19:21:35] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-21 19:21:35] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 19:21:35] http-nio-8081-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=panel, descripcion=Unbranded Rubber Hat, precioUnitario=891.43, categoria=Plastic) 
+[2022-11-21 19:21:36] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:21:36] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-21 19:21:36] http-nio-8081-exec-5 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 19:21:36] http-nio-8081-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:21:36] http-nio-8081-exec-7 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:21:36] http-nio-8081-exec-8 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:21:37] http-nio-8081-exec-10 INFO  c.e.f.c.CarritoController                               >> DELETE /carrito/producto/{productoId} 
+[2022-11-21 19:21:37] http-nio-8081-exec-2 INFO  c.e.f.c.OrdenController                                 >> POST /api/orden/carrito 
+[2022-11-21 19:21:37] http-nio-8081-exec-9 INFO  c.e.f.c.OrdenController                                 >> PATCH orden/{id}/cerrar 
+[2022-11-21 19:21:37] http-nio-8081-exec-5 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 19:21:37] http-nio-8081-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:21:38] http-nio-8081-exec-7 INFO  c.e.f.c.CarritoController                               >> DELETE /api/carrito 
+[2022-11-21 19:21:38] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:21:38] http-nio-8081-exec-3 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=microchip, descripcion=Practical Rubber Towels, precioUnitario=68.09, categoria=Rubber) 
+[2022-11-21 19:21:38] http-nio-8081-exec-3 ERROR c.e.f.c.ProductoController                              >> No puede crear productos 
+[2022-11-21 19:21:38] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 19:21:38] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 19:21:38] http-nio-8081-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=port, descripcion=Sleek Cotton Mouse, precioUnitario=866.27, categoria=Wooden) 
+[2022-11-21 19:21:38] http-nio-8081-exec-9 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:21:38] http-nio-8081-exec-9 INFO  c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-21 19:21:38] http-nio-8081-exec-4 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:21:39] http-nio-8081-exec-6 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:21:39] http-nio-8081-exec-8 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:24:19] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:24:19] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:24:19] http-nio-8081-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=microchip, descripcion=Sleek Rubber Chair, precioUnitario=35.84, categoria=Wooden) 
+[2022-11-21 19:24:19] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:24:19] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=interface, descripcion=Refined Frozen Tuna, precioUnitario=712.22, categoria=Metal) 
+[2022-11-21 19:24:19] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:24:19] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=feed, descripcion=Handcrafted Frozen Car, precioUnitario=307.88, categoria=Wooden) 
+[2022-11-21 19:24:20] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:24:20] http-nio-8081-exec-7 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=feed, descripcion=Refined Steel Shoes, precioUnitario=60.91, categoria=Metal) 
+[2022-11-21 19:24:20] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 19:24:20] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-21 19:24:20] http-nio-8081-exec-1 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 19:24:20] http-nio-8081-exec-1 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=monitor, descripcion=Small Granite Hat, precioUnitario=75.65, categoria=Granite) 
+[2022-11-21 19:24:20] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:24:20] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-21 19:24:21] http-nio-8081-exec-5 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 19:24:21] http-nio-8081-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:24:21] http-nio-8081-exec-7 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:24:21] http-nio-8081-exec-8 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:24:21] http-nio-8081-exec-10 INFO  c.e.f.c.CarritoController                               >> DELETE /carrito/producto/{productoId} 
+[2022-11-21 19:24:21] http-nio-8081-exec-1 INFO  c.e.f.c.OrdenController                                 >> POST /api/orden/carrito 
+[2022-11-21 19:24:22] http-nio-8081-exec-3 INFO  c.e.f.c.OrdenController                                 >> PATCH orden/{id}/cerrar 
+[2022-11-21 19:24:22] http-nio-8081-exec-5 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 19:24:22] http-nio-8081-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:24:22] http-nio-8081-exec-7 INFO  c.e.f.c.CarritoController                               >> DELETE /api/carrito 
+[2022-11-21 19:24:22] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:24:22] http-nio-8081-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=pixel, descripcion=Fantastic Frozen Table, precioUnitario=215.17, categoria=Soft) 
+[2022-11-21 19:24:22] http-nio-8081-exec-9 ERROR c.e.f.c.ProductoController                              >> No puede crear productos si no es administrador 
+[2022-11-21 19:24:23] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 19:24:23] http-nio-8081-exec-1 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 19:24:23] http-nio-8081-exec-1 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=circuit, descripcion=Incredible Granite Gloves, precioUnitario=486.29, categoria=Metal) 
+[2022-11-21 19:24:23] http-nio-8081-exec-3 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:24:23] http-nio-8081-exec-3 INFO  c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-21 19:24:23] http-nio-8081-exec-4 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:24:23] http-nio-8081-exec-6 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:24:23] http-nio-8081-exec-8 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:38:10] http-nio-8081-exec-3 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:38:10] http-nio-8081-exec-8 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:38:10] http-nio-8081-exec-8 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=microchip, descripcion=Fantastic Frozen Soap, precioUnitario=174.8, categoria=Concrete) 
+[2022-11-21 19:38:10] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:38:10] http-nio-8081-exec-10 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=firewall, descripcion=Unbranded Metal Computer, precioUnitario=446.21, categoria=Plastic) 
+[2022-11-21 19:38:10] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:38:10] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=interface, descripcion=Awesome Rubber Shoes, precioUnitario=886.8, categoria=Granite) 
+[2022-11-21 19:38:11] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:38:11] http-nio-8081-exec-7 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=interface, descripcion=Licensed Cotton Keyboard, precioUnitario=467.89, categoria=Soft) 
+[2022-11-21 19:38:11] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 19:38:11] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-21 19:38:11] http-nio-8081-exec-1 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 19:38:11] http-nio-8081-exec-1 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=sensor, descripcion=Incredible Granite Shirt, precioUnitario=77.23, categoria=Rubber) 
+[2022-11-21 19:38:11] http-nio-8081-exec-3 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:38:12] http-nio-8081-exec-8 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-21 19:38:12] http-nio-8081-exec-10 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 19:38:12] http-nio-8081-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:38:12] http-nio-8081-exec-7 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:38:12] http-nio-8081-exec-4 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:38:12] http-nio-8081-exec-5 INFO  c.e.f.c.CarritoController                               >> DELETE /carrito/producto/{productoId} 
+[2022-11-21 19:38:12] http-nio-8081-exec-1 INFO  c.e.f.c.OrdenController                                 >> POST /api/orden/carrito 
+[2022-11-21 19:38:13] http-nio-8081-exec-2 INFO  c.e.f.c.OrdenController                                 >> PATCH orden/{id}/cerrar 
+[2022-11-21 19:38:13] http-nio-8081-exec-10 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 19:38:13] http-nio-8081-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:38:13] http-nio-8081-exec-7 INFO  c.e.f.c.CarritoController                               >> DELETE /api/carrito 
+[2022-11-21 19:38:14] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:38:14] http-nio-8081-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=interface, descripcion=Incredible Soft Hat, precioUnitario=696.35, categoria=Steel) 
+[2022-11-21 19:38:14] http-nio-8081-exec-9 ERROR c.e.f.c.ProductoController                              >> No puede crear productos si no es administrador 
+[2022-11-21 19:38:14] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 19:38:14] http-nio-8081-exec-1 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 19:38:14] http-nio-8081-exec-1 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=transmitter, descripcion=Gorgeous Soft Ball, precioUnitario=818.19, categoria=Frozen) 
+[2022-11-21 19:38:14] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:38:14] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-21 19:38:14] http-nio-8081-exec-8 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:38:14] http-nio-8081-exec-6 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:38:15] http-nio-8081-exec-4 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:39:07] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:39:07] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:39:07] http-nio-8081-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=sensor, descripcion=Small Soft Bacon, precioUnitario=584.95, categoria=Frozen) 
+[2022-11-21 19:39:08] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:39:08] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=program, descripcion=Awesome Fresh Pants, precioUnitario=778.45, categoria=Metal) 
+[2022-11-21 19:39:08] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:39:08] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=sensor, descripcion=Intelligent Fresh Salad, precioUnitario=687.83, categoria=Plastic) 
+[2022-11-21 19:39:08] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:39:08] http-nio-8081-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=program, descripcion=Refined Cotton Hat, precioUnitario=813.07, categoria=Wooden) 
+[2022-11-21 19:39:08] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 19:39:08] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-21 19:39:08] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 19:39:08] http-nio-8081-exec-3 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=firewall, descripcion=Fantastic Plastic Chair, precioUnitario=78.02, categoria=Concrete) 
+[2022-11-21 19:39:08] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:39:09] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-21 19:39:09] http-nio-8081-exec-5 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 19:39:09] http-nio-8081-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:39:09] http-nio-8081-exec-4 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:39:09] http-nio-8081-exec-8 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:39:09] http-nio-8081-exec-10 INFO  c.e.f.c.CarritoController                               >> DELETE /carrito/producto/{productoId} 
+[2022-11-21 19:39:10] http-nio-8081-exec-3 INFO  c.e.f.c.OrdenController                                 >> POST /api/orden/carrito 
+[2022-11-21 19:39:10] http-nio-8081-exec-7 INFO  c.e.f.c.OrdenController                                 >> PATCH orden/{id}/cerrar 
+[2022-11-21 19:39:10] http-nio-8081-exec-5 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 19:39:10] http-nio-8081-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:39:10] http-nio-8081-exec-4 INFO  c.e.f.c.CarritoController                               >> DELETE /api/carrito 
+[2022-11-21 19:39:11] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:39:11] http-nio-8081-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=monitor, descripcion=Unbranded Plastic Bacon, precioUnitario=627.87, categoria=Soft) 
+[2022-11-21 19:39:11] http-nio-8081-exec-9 ERROR c.e.f.c.ProductoController                              >> No puede crear productos si no es administrador 
+[2022-11-21 19:39:11] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 19:39:11] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 19:39:11] http-nio-8081-exec-3 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=port, descripcion=Fantastic Rubber Bacon, precioUnitario=913.66, categoria=Soft) 
+[2022-11-21 19:39:11] http-nio-8081-exec-7 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:39:11] http-nio-8081-exec-7 INFO  c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-21 19:39:11] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:39:11] http-nio-8081-exec-6 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:39:12] http-nio-8081-exec-8 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:42:20] http-nio-8082-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:42:20] http-nio-8082-exec-8 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:42:20] http-nio-8082-exec-8 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=matrix, descripcion=Intelligent Plastic Cheese, precioUnitario=422.29, categoria=Steel) 
+[2022-11-21 19:42:20] http-nio-8082-exec-5 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:42:20] http-nio-8082-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=protocol, descripcion=Tasty Rubber Fish, precioUnitario=38.93, categoria=Soft) 
+[2022-11-21 19:42:20] http-nio-8082-exec-7 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:42:20] http-nio-8082-exec-7 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=system, descripcion=Unbranded Steel Fish, precioUnitario=126.69, categoria=Rubber) 
+[2022-11-21 19:42:20] http-nio-8082-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:42:20] http-nio-8082-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=alarm, descripcion=Handmade Rubber Salad, precioUnitario=767.6, categoria=Soft) 
+[2022-11-21 19:42:21] http-nio-8082-exec-9 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 19:42:21] http-nio-8082-exec-10 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-21 19:42:21] http-nio-8082-exec-2 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 19:42:21] http-nio-8082-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=circuit, descripcion=Fantastic Fresh Soap, precioUnitario=883.68, categoria=Cotton) 
+[2022-11-21 19:42:21] http-nio-8082-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:42:21] http-nio-8082-exec-8 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-21 19:42:21] http-nio-8082-exec-5 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 19:42:22] http-nio-8082-exec-7 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:42:22] http-nio-8082-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:42:22] http-nio-8082-exec-4 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:42:22] http-nio-8082-exec-10 INFO  c.e.f.c.CarritoController                               >> DELETE /carrito/producto/{productoId} 
+[2022-11-21 19:42:22] http-nio-8082-exec-2 INFO  c.e.f.c.OrdenController                                 >> POST /api/orden/carrito 
+[2022-11-21 19:42:23] http-nio-8082-exec-3 INFO  c.e.f.c.OrdenController                                 >> PATCH orden/{id}/cerrar 
+[2022-11-21 19:42:23] http-nio-8082-exec-5 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 19:42:23] http-nio-8082-exec-7 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:42:23] http-nio-8082-exec-6 INFO  c.e.f.c.CarritoController                               >> DELETE /api/carrito 
+[2022-11-21 19:42:23] http-nio-8082-exec-9 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:42:23] http-nio-8082-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=capacitor, descripcion=Practical Granite Soap, precioUnitario=131.27, categoria=Granite) 
+[2022-11-21 19:42:23] http-nio-8082-exec-9 ERROR c.e.f.c.ProductoController                              >> No puede crear productos si no es administrador 
+[2022-11-21 19:42:23] http-nio-8082-exec-10 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 19:42:24] http-nio-8082-exec-2 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 19:42:24] http-nio-8082-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=hard drive, descripcion=Intelligent Cotton Cheese, precioUnitario=651.59, categoria=Soft) 
+[2022-11-21 19:42:24] http-nio-8082-exec-3 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:42:24] http-nio-8082-exec-3 INFO  c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-21 19:42:24] http-nio-8082-exec-8 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:42:24] http-nio-8082-exec-7 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:42:24] http-nio-8082-exec-4 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:42:32] http-nio-8082-exec-10 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:42:32] http-nio-8082-exec-1 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:42:32] http-nio-8082-exec-1 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=array, descripcion=Unbranded Steel Computer, precioUnitario=708.11, categoria=Rubber) 
+[2022-11-21 19:42:32] http-nio-8082-exec-3 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:42:32] http-nio-8082-exec-3 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=hard drive, descripcion=Gorgeous Plastic Tuna, precioUnitario=481.82, categoria=Frozen) 
+[2022-11-21 19:42:32] http-nio-8082-exec-8 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:42:32] http-nio-8082-exec-8 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=port, descripcion=Gorgeous Soft Ball, precioUnitario=883.96, categoria=Cotton) 
+[2022-11-21 19:42:33] http-nio-8082-exec-5 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:42:33] http-nio-8082-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=capacitor, descripcion=Incredible Granite Fish, precioUnitario=431.69, categoria=Plastic) 
+[2022-11-21 19:42:33] http-nio-8082-exec-6 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 19:42:33] http-nio-8082-exec-4 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-21 19:42:33] http-nio-8082-exec-9 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 19:42:33] http-nio-8082-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=microchip, descripcion=Unbranded Metal Bacon, precioUnitario=405.71, categoria=Concrete) 
+[2022-11-21 19:42:33] http-nio-8082-exec-10 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:42:33] http-nio-8082-exec-10 ERROR c.e.f.c.UsuarioController                               >> Ya existe un usuario con ese nombre 
+[2022-11-21 19:43:29] http-nio-8081-exec-7 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:43:30] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:43:30] http-nio-8081-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=microchip, descripcion=Intelligent Frozen Keyboard, precioUnitario=64.95, categoria=Rubber) 
+[2022-11-21 19:43:30] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:43:30] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=card, descripcion=Awesome Rubber Ball, precioUnitario=378.48, categoria=Wooden) 
+[2022-11-21 19:43:30] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:43:30] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=hard drive, descripcion=Rustic Fresh Keyboard, precioUnitario=757.81, categoria=Cotton) 
+[2022-11-21 19:43:30] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:43:30] http-nio-8081-exec-3 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=matrix, descripcion=Handmade Steel Salad, precioUnitario=869.97, categoria=Rubber) 
+[2022-11-21 19:43:30] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 19:43:31] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-21 19:43:31] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 19:43:31] http-nio-8081-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=matrix, descripcion=Generic Frozen Soap, precioUnitario=628.56, categoria=Wooden) 
+[2022-11-21 19:43:31] http-nio-8081-exec-7 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:43:31] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-21 19:43:31] http-nio-8081-exec-5 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 19:43:31] http-nio-8081-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:43:31] http-nio-8081-exec-3 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:43:32] http-nio-8081-exec-8 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:43:32] http-nio-8081-exec-10 INFO  c.e.f.c.CarritoController                               >> DELETE /carrito/producto/{productoId} 
+[2022-11-21 19:43:32] http-nio-8081-exec-9 INFO  c.e.f.c.OrdenController                                 >> POST /api/orden/carrito 
+[2022-11-21 19:43:32] http-nio-8081-exec-1 INFO  c.e.f.c.OrdenController                                 >> PATCH orden/{id}/cerrar 
+[2022-11-21 19:43:33] http-nio-8081-exec-5 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 19:43:33] http-nio-8081-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:43:33] http-nio-8081-exec-3 INFO  c.e.f.c.CarritoController                               >> DELETE /api/carrito 
+[2022-11-21 19:43:33] http-nio-8081-exec-2 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:43:33] http-nio-8081-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=pixel, descripcion=Generic Rubber Table, precioUnitario=208.66, categoria=Rubber) 
+[2022-11-21 19:43:33] http-nio-8081-exec-2 ERROR c.e.f.c.ProductoController                              >> No puede crear productos si no es administrador 
+[2022-11-21 19:43:33] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 19:43:33] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 19:43:33] http-nio-8081-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=sensor, descripcion=Ergonomic Steel Pants, precioUnitario=479.53, categoria=Metal) 
+[2022-11-21 19:43:34] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:43:34] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-21 19:43:34] http-nio-8081-exec-4 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:43:34] http-nio-8081-exec-6 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:43:34] http-nio-8081-exec-8 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:44:15] http-nio-8080-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:44:15] http-nio-8080-exec-9 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:44:15] http-nio-8080-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=panel, descripcion=Intelligent Soft Table, precioUnitario=789.36, categoria=Wooden) 
+[2022-11-21 19:44:15] http-nio-8080-exec-5 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:44:15] http-nio-8080-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=program, descripcion=Handmade Soft Shirt, precioUnitario=451.22, categoria=Granite) 
+[2022-11-21 19:44:15] http-nio-8080-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:44:15] http-nio-8080-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=capacitor, descripcion=Practical Steel Shoes, precioUnitario=599.81, categoria=Fresh) 
+[2022-11-21 19:44:16] http-nio-8080-exec-3 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:44:16] http-nio-8080-exec-3 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=matrix, descripcion=Generic Concrete Shirt, precioUnitario=10.44, categoria=Rubber) 
+[2022-11-21 19:44:16] http-nio-8080-exec-4 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 19:44:16] http-nio-8080-exec-10 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-21 19:44:16] http-nio-8080-exec-2 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 19:44:16] http-nio-8080-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=interface, descripcion=Generic Wooden Car, precioUnitario=939.06, categoria=Wooden) 
+[2022-11-21 19:44:16] http-nio-8080-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:44:17] http-nio-8080-exec-9 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-21 19:44:17] http-nio-8080-exec-5 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 19:44:17] http-nio-8080-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:44:17] http-nio-8080-exec-3 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:44:17] http-nio-8080-exec-8 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:44:17] http-nio-8080-exec-10 INFO  c.e.f.c.CarritoController                               >> DELETE /carrito/producto/{productoId} 
+[2022-11-21 19:44:17] http-nio-8080-exec-2 INFO  c.e.f.c.OrdenController                                 >> POST /api/orden/carrito 
+[2022-11-21 19:44:18] http-nio-8080-exec-7 INFO  c.e.f.c.OrdenController                                 >> PATCH orden/{id}/cerrar 
+[2022-11-21 19:44:18] http-nio-8080-exec-5 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 19:44:18] http-nio-8080-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 19:44:18] http-nio-8080-exec-3 INFO  c.e.f.c.CarritoController                               >> DELETE /api/carrito 
+[2022-11-21 19:44:18] http-nio-8080-exec-4 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 19:44:18] http-nio-8080-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=matrix, descripcion=Tasty Rubber Chips, precioUnitario=531.2, categoria=Frozen) 
+[2022-11-21 19:44:18] http-nio-8080-exec-4 ERROR c.e.f.c.ProductoController                              >> No puede crear productos si no es administrador 
+[2022-11-21 19:44:19] http-nio-8080-exec-10 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 19:44:19] http-nio-8080-exec-2 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 19:44:19] http-nio-8080-exec-2 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=application, descripcion=Handcrafted Plastic Chair, precioUnitario=100.15, categoria=Cotton) 
+[2022-11-21 19:44:19] http-nio-8080-exec-7 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:44:19] http-nio-8080-exec-7 INFO  c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-21 19:44:19] http-nio-8080-exec-9 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 19:44:19] http-nio-8080-exec-6 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 19:44:20] http-nio-8080-exec-8 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 20:26:47] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 20:26:48] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 20:26:48] http-nio-8081-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=feed, descripcion=Generic Soft Mouse, precioUnitario=410.62, categoria=Metal) 
+[2022-11-21 20:26:48] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 20:26:48] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=alarm, descripcion=Practical Plastic Chips, precioUnitario=174.87, categoria=Plastic) 
+[2022-11-21 20:26:48] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 20:26:48] http-nio-8081-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=firewall, descripcion=Fantastic Fresh Cheese, precioUnitario=134.63, categoria=Granite) 
+[2022-11-21 20:26:48] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 20:26:48] http-nio-8081-exec-7 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=program, descripcion=Small Granite Car, precioUnitario=893.88, categoria=Concrete) 
+[2022-11-21 20:26:48] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 20:26:48] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-21 20:26:48] http-nio-8081-exec-1 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 20:26:48] http-nio-8081-exec-1 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=microchip, descripcion=Gorgeous Granite Pizza, precioUnitario=96.38, categoria=Fresh) 
+[2022-11-21 20:26:49] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 20:26:49] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-21 20:26:49] http-nio-8081-exec-5 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 20:26:49] http-nio-8081-exec-9 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 20:26:49] http-nio-8081-exec-7 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 20:26:49] http-nio-8081-exec-8 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 20:26:50] http-nio-8081-exec-10 INFO  c.e.f.c.CarritoController                               >> DELETE /carrito/producto/{productoId} 
+[2022-11-21 20:26:50] http-nio-8081-exec-1 INFO  c.e.f.c.OrdenController                                 >> POST /api/orden/carrito 
+[2022-11-21 20:26:50] http-nio-8081-exec-3 INFO  c.e.f.c.OrdenController                                 >> PATCH orden/{id}/cerrar 
+[2022-11-21 20:26:50] http-nio-8081-exec-5 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 20:26:50] http-nio-8081-exec-9 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 20:26:51] http-nio-8081-exec-7 INFO  c.e.f.c.CarritoController                               >> DELETE /api/carrito 
+[2022-11-21 20:26:51] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 20:26:51] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=card, descripcion=Handcrafted Plastic Hat, precioUnitario=508.78, categoria=Rubber) 
+[2022-11-21 20:26:51] http-nio-8081-exec-6 ERROR c.e.f.c.ProductoController                              >> No puede crear productos si no es administrador 
+[2022-11-21 20:26:51] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 20:26:51] http-nio-8081-exec-1 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 20:26:51] http-nio-8081-exec-1 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=capacitor, descripcion=Tasty Plastic Towels, precioUnitario=987.02, categoria=Cotton) 
+[2022-11-21 20:26:51] http-nio-8081-exec-3 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 20:26:51] http-nio-8081-exec-3 INFO  c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-21 20:26:51] http-nio-8081-exec-4 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 20:26:52] http-nio-8081-exec-9 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 20:26:52] http-nio-8081-exec-8 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 23:34:57] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 23:34:58] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 23:34:58] http-nio-8081-exec-4 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=port, descripcion=Refined Granite Pizza, precioUnitario=42.75, categoria=Wooden) 
+[2022-11-21 23:34:58] http-nio-8081-exec-5 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 23:34:58] http-nio-8081-exec-5 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=capacitor, descripcion=Ergonomic Cotton Cheese, precioUnitario=914.16, categoria=Soft) 
+[2022-11-21 23:34:58] http-nio-8081-exec-6 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 23:34:58] http-nio-8081-exec-6 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=firewall, descripcion=Refined Frozen Chair, precioUnitario=286.95, categoria=Concrete) 
+[2022-11-21 23:34:59] http-nio-8081-exec-7 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 23:34:59] http-nio-8081-exec-7 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=program, descripcion=Awesome Plastic Keyboard, precioUnitario=568.27, categoria=Wooden) 
+[2022-11-21 23:34:59] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 23:34:59] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> GET /api/producto/{id} 
+[2022-11-21 23:34:59] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 23:34:59] http-nio-8081-exec-3 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=system, descripcion=Fantastic Metal Shirt, precioUnitario=947.63, categoria=Rubber) 
+[2022-11-21 23:34:59] http-nio-8081-exec-1 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 23:35:00] http-nio-8081-exec-4 INFO  c.e.f.c.ProductoController                              >> GET /api/producto 
+[2022-11-21 23:35:00] http-nio-8081-exec-5 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 23:35:00] http-nio-8081-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 23:35:00] http-nio-8081-exec-7 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 23:35:00] http-nio-8081-exec-8 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 23:35:01] http-nio-8081-exec-10 INFO  c.e.f.c.CarritoController                               >> DELETE /carrito/producto/{productoId} 
+[2022-11-21 23:35:01] http-nio-8081-exec-3 INFO  c.e.f.c.OrdenController                                 >> POST /api/orden/carrito 
+[2022-11-21 23:35:01] http-nio-8081-exec-2 INFO  c.e.f.c.OrdenController                                 >> PATCH orden/{id}/cerrar 
+[2022-11-21 23:35:02] http-nio-8081-exec-5 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito 
+[2022-11-21 23:35:02] http-nio-8081-exec-6 INFO  c.e.f.c.CarritoController                               >> POST /api/carrito/producto/{productoId} 
+[2022-11-21 23:35:02] http-nio-8081-exec-7 INFO  c.e.f.c.CarritoController                               >> DELETE /api/carrito 
+[2022-11-21 23:35:02] http-nio-8081-exec-9 INFO  c.e.f.c.ProductoController                              >> POST /api/producto 
+[2022-11-21 23:35:02] http-nio-8081-exec-9 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=program, descripcion=Intelligent Concrete Shoes, precioUnitario=264.05, categoria=Steel) 
+[2022-11-21 23:35:02] http-nio-8081-exec-9 ERROR c.e.f.c.ProductoController                              >> No puede crear productos si no es administrador 
+[2022-11-21 23:35:02] http-nio-8081-exec-10 INFO  c.e.f.c.ProductoController                              >> DELETE /api/producto/{id} 
+[2022-11-21 23:35:03] http-nio-8081-exec-3 INFO  c.e.f.c.ProductoController                              >> PUT /api/producto/{id} 
+[2022-11-21 23:35:03] http-nio-8081-exec-3 DEBUG c.e.f.c.ProductoController                              >> ProductoRequest(codigo=sensor, descripcion=Unbranded Cotton Gloves, precioUnitario=109.32, categoria=Steel) 
+[2022-11-21 23:35:03] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 23:35:03] http-nio-8081-exec-2 INFO  c.e.f.c.UsuarioController                               >> Acceso denegado! 
+[2022-11-21 23:35:03] http-nio-8081-exec-4 INFO  c.e.f.c.UsuarioController                               >> POST /api/auth/usuario 
+[2022-11-21 23:35:03] http-nio-8081-exec-6 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
+[2022-11-21 23:35:03] http-nio-8081-exec-8 INFO  c.e.f.c.UsuarioController                               >> PATCH /api/usuario 
