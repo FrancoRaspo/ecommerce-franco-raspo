@@ -10,6 +10,7 @@ Este debe ejecutarse antes de la aplicación para poder obtener si es necesarios
 
 Comandos: 
 git clone https://github.com/FrancoRaspo/ecommerce-franco-raspo-config-server.git
+
 mvnw install
 mvnw spring-boot:run
 
