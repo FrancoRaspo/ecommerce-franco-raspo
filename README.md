@@ -8,7 +8,10 @@ Los archivos de BootStrap se alojan en GitHub.
 El proyecto de config server está en GitHub link https://github.com/FrancoRaspo/ecommerce-franco-raspo-config-server
 Este debe ejecutarse antes de la aplicación para poder obtener si es necesarios los datos de los ambientes que no son "Dev".
 
-Comando: git clone https://github.com/FrancoRaspo/ecommerce-franco-raspo-config-server.git
+Comandos: 
+git clone https://github.com/FrancoRaspo/ecommerce-franco-raspo-config-server.git
+mvnw install
+mvnw spring-boot:run
 
 Se necesita un repositorio MongoDB.
 
