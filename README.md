@@ -4,6 +4,9 @@ Proyecto final de curso CoderHouse Java
 El proyecto utiliza un config server para obtener los ambientes de UAT y producción
 Los archivos de BootStrap se alojan en GitHub.
 
+git clone https://github.com/FrancoRaspo/ecommerce-franco-raspo-config-server.git
+
+
 El proyecto de config server está en GitHub link https://github.com/FrancoRaspo/ecommerce-franco-raspo-config-server
 Este debe ejecutarse antes de la aplicación para poder obtener si es necesarios los datos de los ambientes que no son "Dev".
 
